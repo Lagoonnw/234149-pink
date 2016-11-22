@@ -1,7 +1,8 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Екатерина Крутакова](https://up.htmlacademy.ru/adaptive/9/user/234149).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская]
+(https://htmlacademy.ru/profile/malina)
 
 ---
 
