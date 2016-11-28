@@ -4,29 +4,28 @@
   "private": true,
   "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "0.1.x",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "autoprefixer": "6.5.3",
+    "browser-sync": "2.18.2",
+    "gulp": "3.9.1",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-sass": "2.3.2",
+    "@htmlacademy/editorconfig-cli": "0.1.x"
   },
   "scripts": {
-    "test": "editorconfig-cli"
+    "test": "editorconfig-cli",
+    "build": "gulp style",
+    "start": "gulp serve"
   },
   "editorconfig-cli": [
     "*.html",
-    "*.json"
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "6.7"
-  },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lagoonnw/234149-pink.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lagoonnw/234149-pink/issues"
-  },
-  "homepage": "https://github.com/Lagoonnw/234149-pink#readme"
+  }
 }
