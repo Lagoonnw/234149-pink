@@ -2,11 +2,213 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>HTML Academy: Пинк| Спасение от серых будней</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <!-- Шапка сайта и основное меню-->
+    <header class="page-header">
+      <div class="page-header__inner">
+        <nav class="main-menu main-menu--closed">
+          <div class="main-menu__logo">PINK
+            <picture>
+              <source src="http://placehold.it/150x100">
+            </picture>
+          </div>
+          <span class="main-menu__toggle main-menu__toggle--closed">открыть меню</span>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Фотографии</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Конкурс</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">HTML academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- основной контент -->
+    <main class="page-content">
+      <h1 class="page-content__h1 page-content__h1--visually-hidden">Приложение PINK</h1>
+      <section class="intro">
+        <div class="intro__inner">
+          <div class="intro__promo">
+            <h2 class="intro__header">Взгляни на жизнь ярче!</h2>
+            <picture class="intro__img">
+              <source src="http://placehold.it/150x100">
+              <img src="http://placehold.it/150x100">
+            </picture>
+          </div>
+          <!-- ссылки скачать приложение -->
+          <section class="intro-downloads">
+            <a class="btn" href="http://www.apple.com/ru/itunes/download/">Скачать приложение</a>
+            <section class="intro-downloads__buttons">
+              <a class="intro-downloads__btn intro-downloads__btn--apple" href="http://www.apple.com/retail/">iPhone</a>
+              <a class="intro-downloads__btn intro-downloads__btn--android" href="https://play.google.com/store?hl=ru">Android</a>
+              <a class="intro-downloads__btn intro-downloads__btn--winphone" href="https://www.microsoftstore.com/store/msusa/en_US/list/Popular-apps-for-Windows-8/categoryID.67741000">WinPhone</a>
+            </section>
+            <p class="intro-downloads__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </section>
+        </div>
+      </section>
+      <!-- Характеристики -->
+      <section class="features">
+        <div class="features__inner">
+          <p class="features__title">Устали от серости мегаполиса?</p>
+          <p class="features__title">Нам есть, что вам предложить!</p>
+          <section class="features__items">
+            <article class="features__item"><!-- стилизация внутри артиклов через легкий каскад -->
+              <h2>Поднимает настроение</h2>
+              <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </article>
+            <article class="features__item"><!-- стилизация внутри артиклов через легкий каскад -->
+              <h2>Меняет мир вокруг</h2>
+              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </article>
+            <article class="features__item"><!-- стилизация внутри артиклов через легкий каскад -->
+              <h2>Заводит новых друзей</h2>
+              <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </article>
+          </section>
+        </div>
+      </section>
+      <!-- Отзывы -->
+      <section class="reviews">
+        <div class="reviews__inner">
+          <div class="reviews__toggles">
+           <!-- скрытые радиобаттоны -->
+           <input class="reviews__toggle" type="radio" name="toggle" id="review-1" checked>
+           <input class="reviews__toggle" type="radio" name="toggle" id="review-2">
+           <input class="reviews__toggle" type="radio" name="toggle" id="review-3">
+           <!-- лэйблы для стилизации -->
+           <div class="reviews__controls">
+             <label class="reviews__control-btn" for="review-1"></label>
+             <label class="reviews__control-btn" for="review-2"></label>
+             <label class="reviews__control-btn" for="review-3"></label>
+           </div>
+          </div>
+          <!-- Слайды с отзывами -->
+          <section class="reviews__slides">
+            <article class="reviews__slide">
+              <h2>Николай Петров</h2>
+              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </article>
+            <article class="reviews__slide">
+              <h2>Степан Иванов</h2>
+              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </article>
+            <article class="reviews__slide">
+              <h2>Модест Мусоргский</h2>
+              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </article>
+          </section>
+        </div>
+      </section>
+      <!-- Прайс -->
+      <section class="price">
+        <div class="price__toggles">
+          <!-- скрытые радиобаттоны -->
+          <input class="price__toggle" type="radio" name="toggle" id="price-1" checked>
+          <input class="price__toggle" type="radio" name="toggle" id="price-2">
+          <input class="price__toggle" type="radio" name="toggle" id="price-3">
+          <!-- лэйблы для стилизации -->
+          <div class="price__controls">
+            <label class="price__control-btn" for="price-1"></label>
+            <label class="price__control-btn" for="price-2"></label>
+            <label class="price__control-btn" for="price-3"></label>
+          </div>
+        </div>
+        <!-- Таблица-прайс -->
+        <section class="price-tables">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <th class="price-table__header" colspan="2">
+                  <p class="price-table__title">База</p>
+                  <p class="price-table__amount">1,99 USD</p>
+                </th>
+                <th class="price-table__header price-table__header--flag-hit" colspan="2">
+                  <p class="price-table__title">Стандарт</p>
+                  <p class="price-table__amount">3,99 USD</p>
+                </th>
+                <th class="price-table__header" colspan="2">
+                  <p class="price-table__title">Анлим</p>
+                  <p class="price-table__amount">9,99 USD</p>
+                </th>
+              </tr>
+              <tr>
+                <td class="price-table__item">Розовый фильтр</td>
+                <td class="price-table__check price-table__check--yes">yes</td>
+                <td class="price-table__item">Розовый фильтр</td>
+                <td class="price-table__check price-table__check--yes">yes</td>
+                <td class="price-table__item">Розовый фильтр</td>
+                <td class="price-table__check price-table__check--yes">yes</td>
+              </tr>
+              <tr>
+                <td class="price-table__item">Смайлики</td>
+                <td class="price-table__check price-table__check--no">no</td>
+                <td class="price-table__item">Смайлики</td>
+                <td class="price-table__check price-table__check--yes">yes</td>
+                <td class="price-table__item">Смайлики</td>
+                <td class="price-table__check price-table__check--yes">yes</td>
+              </tr>
+              <tr>
+                <td class="price-table__item">Комментарии</td>
+                <td class="price-table__check price-table__check--no">no</td>
+                <td class="price-table__item">Комментарии</td>
+                <td class="price-table__check price-table__check--no">no</td>
+                <td class="price-table__item">Комментарии</td>
+                <td class="price-table__check price-table__check--yes">yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+    <!-- футер -->
+    <footer class="page-footer page-footer--index">
+     <section class="page-footer-contacts">
+      <div class="page-footer-contacts__inner">
+        <p class="page-footer-contacts__title">Остались вопросы? Свяжитесь с нами!</p>
+        <div class="page-footer-contacts__contact-item">
+          <b>Звоните:</b>
+          <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </div>
+        <div class="page-footer-contacts__contact-item">
+          <b>Пишите:</b>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <div class="page-footer-contacts__contact-item">
+          <b>Приезжайте в гости:</b>
+          <p>ул. Большая Конюшенная, 19/8</p>
+        </div>
+        <div class="page-footer-contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616492104!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1480145569718" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+     </section>
+     <section class="page-footer-socials">
+       <div class="page-footer-socials__inner">
+         <div class="page-footer-socials__applogo">PINK
+           <picture>
+             <sourse src="http://placehold.it/150x100"></sourse>
+           </picture>
+         </div>
+         <section class="footer-socials">
+           <a class="footer-socials__item footer-socials__item--twitter" href="http://twitter.com">Twitter</a>
+           <a class="footer-socials__item footer-socials__item--facebook" href="http://facebook.com">Facebook</a>
+           <a class="footer-socials__item footer-socials__item--youtube" href="http://youtube.com">YouTube</a>
+         </section>
+         <div class="page-footer-socials__copyrights">
+           <p>Разработано <span class="page-footer-socials__copyright-logo">Html Academy</span></p>
+         </div>
+       </div>
+     </section>
+    </footer>
   </body>
 </html>
