@@ -1,0 +1,75 @@
+.btn {
+  display: block;
+  border-radius: 30px;
+  border: 4px solid $pink;
+  color: $pink;
+  text-align: center;
+  transition: all 0.3s;
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  @include font(1.125em, 700, 1.125em);
+  @include padding-tb(1.063em, 1.063em);
+
+  &:hover {
+    background-color: $pink;
+    color: $white;
+  }
+
+  &:active {
+    color: #e08195;
+  }
+
+  &--index {
+    border: 4px solid $white;
+    color: $white;
+    background-color: none;
+
+    @include padding-tb(0.875em, 1.063em);
+  }
+
+  &--index:hover {
+      color: $pink;
+      background-color: $white;
+  }
+
+  &--index:active {
+      color: #f2ced5;
+  }
+
+  &--form-btn {
+    border: 4px solid #2aab6d;
+    color: #2aab6d;
+    border-radius: 5px;
+    text-transform: uppercase;
+    @include font(1.125em, 700, 1.875em);
+    @include padding-tb(0.750em, 0.750em);
+  }
+
+  &--form-btn:hover {
+    border: 4px solid #1c9b5e;
+    background-color: #1c9b5e;
+  }
+
+  &--form-btn:active {
+    color: #7dbd99;
+  }
+
+  &--cancel {
+    border: 4px solid #dddfe0;
+    color: #dddfe0;
+    background-color: $white;
+  }
+
+  &--cancel:hover {
+    border: 4px solid #b5b9be;
+    color: #b5b9be;
+    background-color: $white;
+  }
+
+  &--cancel:active {
+    background-color: #b5b9be;
+    color: $white;
+  }
+}

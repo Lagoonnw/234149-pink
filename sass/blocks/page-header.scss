@@ -1,0 +1,4 @@
+.page-header {
+  @include font(0.875em, 700, 1.500em);
+  color: $darkblue;
+}

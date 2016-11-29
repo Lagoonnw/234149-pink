@@ -1,0 +1,10 @@
+@mixin font ($size: 0.875em, $weight: 400, $line: 1.500em) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line;
+}
+
+@mixin padding-tb ($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
