@@ -1,0 +1,16 @@
+.gallery {
+  margin: auto;
+}
+
+.gallery__title {
+  @include font(0.875em, 400, 1.875em);
+  text-align: center;
+}
+
+.img-post__post {
+  background-color: $lightgrey;
+}
+
+.photo-redactor {
+  background-color: $lightgrey;
+}

@@ -2,3 +2,34 @@
   @include font(0.875em, 400, 1.500em);
   color: $darkblue;
 }
+
+.page-footer-contacts__title {
+  @include font(1.5em, 300, 1.5em*1.2);
+  color: $pink;
+  text-align: center;
+}
+
+.page-footer-contacts__map {
+  background-color: #eae6dd;
+  background-image: url('../img/bg-map-mobile@1x.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-footer-contacts__contact-item {
+
+  b {
+    @include font(1.125em, 700, 1.125em*1.2);
+  }
+
+  a {
+    @include font(1.5em, 300, 1.5em*1.2);
+    color: $pink;
+    text-decoration: none;
+  }
+
+  p {
+    @include font(1.5em, 300, 1.5em*1.2);
+    color: $pink;
+  }
+}

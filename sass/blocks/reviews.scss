@@ -1,0 +1,16 @@
+.reviews {
+  background-color: $white;
+}
+
+.reviews__slide {
+
+  h2 {
+    @include font(1.125em, 700, 1.875em);
+    color: #000;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}

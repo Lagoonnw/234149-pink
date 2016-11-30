@@ -1,0 +1,52 @@
+.page-form__title {
+  @include font(0.875em, 400, 1.875em);
+  text-align: center;
+}
+
+.fieldset-ID {
+  background-color: $white;
+}
+
+.fieldset-ID__label {
+  @include font(1.125em, 400, 1.875em);
+  color: $darkblue;
+}
+
+.fieldset-apps {
+  background-color: $lightgrey;
+
+  legend {
+    @include font(0.875em, 400, 1.125em);
+    color: $pink;
+    text-transform: uppercase;
+  }
+}
+
+.fieldset-apps__label {
+  @include font(1.125em, 400, 1.875em);
+  color: $darkblue;
+}
+
+.fieldset-achive {
+  background-color: $lightgrey;
+
+  legend {
+    @include font(0.875em, 400, 1.125em);
+    color: $pink;
+    text-transform: uppercase;
+  }
+}
+
+.fieldset-achive__label{
+  @include font(1.125em, 400, 1.875em);
+  color: $darkblue;
+}
+
+.fieldset-feedback {
+
+  legend {
+    @include font(0.875em, 400, 1.125em);
+    color: $pink;
+    text-transform: uppercase;
+  }
+}

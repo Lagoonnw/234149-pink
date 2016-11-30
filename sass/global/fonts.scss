@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'opensans', 'Arial', sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   src: url('../fonts/opensans.woff'),
        url('../fonts/opensans.woff2'),
        url('../fonts/opensansbold.woff'),
@@ -8,3 +8,6 @@
        url('../fonts/opensanslight.woff2');
 }
 
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}

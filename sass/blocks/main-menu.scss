@@ -1,3 +1,34 @@
 .main-menu {
   background-color: $darkblue;
 }
+
+.main-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu__item {
+  margin: 0 auto;
+}
+
+.main-menu__link {
+  text-decoration: none;
+  color: $white;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  text-align: center;
+  @include font(1.125em, 700, 2em);
+
+  &:hover {
+    color: $pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    color: $pink;
+  }
+}

@@ -1,0 +1,31 @@
+.features {
+  background-color: $white;
+}
+
+.features__title {
+  @include font(1.5em, 300, 1.5em*1.2);
+  color: $darkblue;
+  text-align: center;
+}
+.features__items {
+  background-color: $lightgrey;
+  position: relative;
+  padding-bottom: 320px;
+  background-image: url('../img/iphone-screen-mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: $lightgrey;
+}
+
+.features__item {
+
+  h2 {
+    @include font(1.125em, 700, 1.5em);
+    color: #000;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}
