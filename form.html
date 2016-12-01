@@ -1,156 +1,155 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang='ru'>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>HTML Academy: Пинк | Участвуйте в конкурсе!</title>
+    <link href='css/style.css' rel='stylesheet'>
   </head>
   <body>
     <!-- Шапка сайта и основное меню-->
-    <header class="page-header">
-      <div class="page-header__inner">
-        <nav class="main-menu main-menu--closed">
-          <div class="main-menu__logo">PINK
+    <header class='page-header'>
+      <div class='page-header__inner'>
+        <nav class='main-menu main-menu--closed'>
+          <div class='main-menu__logo'>PINK
             <picture>
-              <source src="http://placehold.it/150x100">
+              <source src='http://placehold.it/150x100'>
             </picture>
           </div>
-          <span class="main-menu__toggle main-menu__toggle--closed">открыть меню</span>
-          <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="index.html">Главная</a>
+          <span class='main-menu__toggle main-menu__toggle--closed'>открыть меню</span>
+          <ul class='main-menu__list'>
+            <li class='main-menu__item'>
+              <a class='main-menu__link' href='index.html'>Главная</a>
             </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Фотографии</a>
+            <li class='main-menu__item'>
+              <a class='main-menu__link' href='photo.html'>Фотографии</a>
             </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Конкурс</a>
+            <li class='main-menu__item'>
+              <a class='main-menu__link main-menu__link--active'>Конкурс</a>
             </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">HTML academy</a>
+            <li class='main-menu__item'>
+              <a class='main-menu__link' href='#'>HTML academy</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <!-- основной контент -->
-    <main class="page-content">
-      <h1 class="page-content__h1 page-content__h1--visually-hidden">Конкурс PINK</h1>
+    <main class='page-content'>
+      <h1 class='page-content__h1 page-content__h1--visually-hidden'>Конкурс PINK</h1>
       <!-- Блок с фоновой промо-фотографией и заголовком -->
-      <section class="intro intro--form-page">
-        <div class="intro__inner">
-          <div class="intro__promo">
-            <h2 class="intro__header">Конкурс на самое безбашеное путешествие с Пинк</h2>
-          </div>
+      <section class='intro intro--form-page'>
+        <div class='intro__promo'>
+          <h2 class='intro__header'>Конкурс на самое безбашеное путешествие с Пинк</h2>
         </div>
       </section>
       <!-- форма для отправки -->
-      <form class="page-form" method="post" action="https://htmlacademy.ru/">
-        <p class="page-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
-        <fieldset class="fieldset-ID">
-          <label class="fieldset-ID__label">Фамилия:
-            <input class="fieldset-ID__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+      <form class='page-form' method='post' action='https://htmlacademy.ru/'>
+        <p class='page-form__title'>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
+        <fieldset class='fieldset-ID'>
+          <label class='fieldset-ID__label'>Фамилия:
+            <input class='fieldset-ID__input' type='text' id='last-name' name='last-name' placeholder='Укажите фамилию *' required>
           </label>
-          <label class="fieldset-ID__label">Имя:
-            <input class="fieldset-ID__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
+          <label class='fieldset-ID__label'>Имя:
+            <input class='fieldset-ID__input' type='text' id='first-name' name='first-name' placeholder='Введите ваше имя *' required>
           </label>
-          <label class="fieldset-ID__label">Имя:
-            <input class="fieldset-ID__input" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+          <label class='fieldset-ID__label'>Имя:
+            <input class='fieldset-ID__input' type='text' id='patronymic' name='patronymic' placeholder='Ну и отчество тоже'>
           </label>
         </fieldset>
-        <fieldset class="fieldset-achive">
+        <fieldset class='fieldset-achive'>
           <legend>Ваши безбашенные достижения в путешествии</legend>
-          <label class="fieldset-achive__label">Сделал селфи с акулой
-            <input class="fieldset-achive__checkbox" type="checkbox" id="selfie" name="selfie" checked>
-            <span class="fieldset-achive__checkbox-indicator"></span>
+          <label class='fieldset-achive__label'>Сделал селфи с акулой
+            <input class='fieldset-achive__checkbox' type='checkbox' id='selfie' name='selfie' checked>
+            <span class='fieldset-achive__checkbox-indicator'></span>
           </label>
-          <label class="fieldset-achive__label">Обгорел на пляже
-            <input class="fieldset-achive__checkbox" type="checkbox" id="sunburn" name="sunburn" checked>
-            <span class="fieldset-achive__checkbox-indicator"></span>
+          <label class='fieldset-achive__label'>Обгорел на пляже
+            <input class='fieldset-achive__checkbox' type='checkbox' id='sunburn' name='sunburn' checked>
+            <span class='fieldset-achive__checkbox-indicator'></span>
           </label>
-          <label class="fieldset-achive__label">Видел Чака Норриса
-            <input class="fieldset-achive__checkbox" type="checkbox" id="chack-norris" name="chack-norris">
-            <span class="fieldset-achive__checkbox-indicator"></span>
+          <label class='fieldset-achive__label'>Видел Чака Норриса
+            <input class='fieldset-achive__checkbox' type='checkbox' id='chack-norris' name='chack-norris'>
+            <span class='fieldset-achive__checkbox-indicator'></span>
           </label>
-          <label class="fieldset-achive__label">Накупил сувениров
-            <input class="fieldset-achive__checkbox" type="checkbox" id="souvenirs" name="souvenirs">
-            <span class="fieldset-achive__checkbox-indicator"></span>
+          <label class='fieldset-achive__label'>Накупил сувениров
+            <input class='fieldset-achive__checkbox' type='checkbox' id='souvenirs' name='souvenirs'>
+            <span class='fieldset-achive__checkbox-indicator'></span>
           </label>
-          <label class="fieldset-achive__label">Удержал башню
-            <input class="fieldset-achive__checkbox" type="checkbox" id="tower" name="tower">
-            <span class="fieldset-achive__checkbox-indicator"></span>
+          <label class='fieldset-achive__label'>Удержал башню
+            <input class='fieldset-achive__checkbox' type='checkbox' id='tower' name='tower'>
+            <span class='fieldset-achive__checkbox-indicator'></span>
           </label>
-          <label class="fieldset-achive__label">Разгромил отель
-            <input class="fieldset-achive__checkbox" type="checkbox" id="crush-hotel" name="crush-hotel" checked>
-            <span class="fieldset-achive__checkbox-indicator"></span>
-          </label>
-        </fieldset>
-        <fieldset class="fieldset-ID">
-          <label class="fieldset-ID__label">Номер телефона
-            <input class="fieldset-ID__input" type="tel" id="phone-number" name="phone-number" placeholder="Номер, пожалуйста">
-          </label>
-          <label class="fieldset-ID__label">Адресок почты
-            <input class="fieldset-ID__input" type="email" id="email" name="email" placeholder="Введите почту *" required>
+          <label class='fieldset-achive__label'>Разгромил отель
+            <input class='fieldset-achive__checkbox' type='checkbox' id='crush-hotel' name='crush-hotel' checked>
+            <span class='fieldset-achive__checkbox-indicator'></span>
           </label>
         </fieldset>
-        <fieldset class="fieldset-apps">
+        <fieldset class='fieldset-ID'>
+          <label class='fieldset-ID__label'>Номер телефона
+            <input class='fieldset-ID__input' type='tel' id='phone-number' name='phone-number' placeholder='Номер, пожалуйста'>
+          </label>
+          <label class='fieldset-ID__label'>Адресок почты
+            <input class='fieldset-ID__input' type='email' id='email' name='email' placeholder='Введите почту *' required>
+          </label>
+        </fieldset>
+        <fieldset class='fieldset-apps'>
           <legend>С каким приложением путешествовали?</legend>
-          <label class="fieldset-apps__label">Pink для iOS
-            <input class="fieldset-apps__radio" type="radio" id="iOS" name="radio" checked>
-            <span class="fieldset-apps__radio-identificator"></span>
+          <label class='fieldset-apps__label'>Pink для iOS
+            <input class='fieldset-apps__radio' type='radio' id='iOS' name='radio' checked>
+            <span class='fieldset-apps__radio-identificator'></span>
           </label>
-          <label class="fieldset-apps__label">Pink для Android
-            <input class="fieldset-apps__radio" type="radio" id="android" name="radio">
-            <span class="fieldset-apps__radio-identificator"></span>
+          <label class='fieldset-apps__label'>Pink для Android
+            <input class='fieldset-apps__radio' type='radio' id='android' name='radio'>
+            <span class='fieldset-apps__radio-identificator'></span>
           </label>
-          <label class="fieldset-apps__label">Windows Phone
-            <input class="fieldset-apps__radio" type="radio" id="winphone" name="radio">
-            <span class="fieldset-apps__radio-identificator"></span>
+          <label class='fieldset-apps__label'>Windows Phone
+            <input class='fieldset-apps__radio' type='radio' id='winphone' name='radio'>
+            <span class='fieldset-apps__radio-identificator'></span>
           </label>
         </fieldset>
-        <fieldset class="fieldset-feedback">
+        <fieldset class='fieldset-feedback'>
           <legend>Опишите свои эмоции</legend>
-          <textarea class="fieldset-feedback__text">Можно прям в красках, не стесняясь в выражениях</textarea>
+          <textarea class='fieldset-feedback__text'>Можно прям в красках, не стесняясь в выражениях</textarea>
         </fieldset>
-        <button class="btn btn--form-btn" type="submit">Отправить форму</button>
-        <small class="page-form__footnote"><span>*</span> — обязательные поля</small>
+        <button class='btn btn--form-btn' type='submit'>Отправить форму</button>
+        <small class='page-form__footnote'><span>*</span> — обязательные поля</small>
       </form>
     </main>
     <!-- футер -->
-    <footer class="page-footer">
-     <section class="page-footer-contacts">
-      <div class="page-footer-contacts__inner">
-        <p class="page-footer-contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-        <div class="page-footer-contacts__contact-item">
+    <footer class='page-footer'>
+     <section class='page-footer-contacts'>
+      <div class='page-footer-contacts__inner'>
+        <p class='page-footer-contacts__title'>Остались вопросы? Свяжитесь с нами!</p>
+        <div class='page-footer-contacts__contact-item'>
           <b>Звоните:</b>
-          <a href="tel:++78125556666">+7 (812) 555-66-66</a>
+          <a href='tel:++78125556666'>+7 (812) 555-66-66</a>
         </div>
-        <div class="page-footer-contacts__contact-item">
+        <div class='page-footer-contacts__contact-item'>
           <b>Пишите:</b>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a>
         </div>
-        <div class="page-footer-contacts__contact-item">
+        <div class='page-footer-contacts__contact-item'>
           <b>Приезжайте в гости:</b>
           <p>ул. Большая Конюшенная, 19/8</p>
         </div>
-        <div class="page-footer-contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616492104!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1480145569718" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class='page-footer-contacts__map'>
+          <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616492104!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1480145569718' frameborder='0' style='border:0' width='100%' allowfullscreen></iframe>
         </div>
       </div>
      </section>
-     <section class="page-footer-socials">
-       <div class="page-footer-socials__inner">
-         <div class="page-footer-socials__applogo">PINK
+     <section class='page-footer-socials'>
+       <div class='page-footer-socials__inner'>
+         <div class='page-footer-socials__applogo'>PINK
            <picture>
-             <sourse src="http://placehold.it/150x100"></sourse>
+             <sourse src='http://placehold.it/150x100'></sourse>
            </picture>
          </div>
-         <section class="footer-socials">
-           <a class="footer-socials__item footer-socials__item--twitter" href="http://twitter.com">Twitter</a>
-           <a class="footer-socials__item footer-socials__item--facebook" href="http://facebook.com">Facebook</a>
-           <a class="footer-socials__item footer-socials__item--youtube" href="http://youtube.com">YouTube</a>
+         <section class='footer-socials'>
+           <a class='footer-socials__item footer-socials__item--twitter' href='http://twitter.com'>Twitter</a>
+           <a class='footer-socials__item footer-socials__item--facebook' href='http://facebook.com'>Facebook</a>
+           <a class='footer-socials__item footer-socials__item--youtube' href='http://youtube.com'>YouTube</a>
          </section>
-         <div class="page-footer-socials__copyrights">
-           <p>Разработано <span class="page-footer-socials__copyright-logo">Html Academy</span></p>
+         <div class='page-footer-socials__copyrights'>
+           <p>Разработано <span class='page-footer-socials__copyright-logo'>Html Academy</span></p>
          </div>
        </div>
      </section>

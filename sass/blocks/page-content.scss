@@ -1,0 +1,14 @@
+@import 'variables.scss';
+
+.page-content {
+  @include font(0.875em, 400, 1.500em);
+  color: $darkblue;
+}
+
+.page-content__h1 {
+  @include font(0.875em, 400, 1.500em);
+
+  &--visually-hidden {
+    display: none;
+  }
+}

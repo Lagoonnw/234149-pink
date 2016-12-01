@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+.intro {
+  background-color: $darkblue;
+}
+
+.intro__inner {
+  @include padding-rl(1.25em, 1.25em);
+}
+
+.intro__promo {
+  position: relative;
+  background-image: url('../img/bg-back-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.intro__header {
+  @include font(1.5em, 300, 1.5em*1.2);
+  color: $white;
+  text-align: center;
+}
+
+.intro-downloads {
+  background-color: $darkblue;
+}
