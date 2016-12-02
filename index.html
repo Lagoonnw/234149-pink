@@ -3,19 +3,34 @@
   <head>
     <meta charset='utf-8'>
     <title>HTML Academy: Пинк| Спасение от серых будней</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href='css/normalize.css' rel='stylesheet'>
     <link href='css/style.css' rel='stylesheet'>
   </head>
   <body>
     <!-- Шапка сайта и основное меню-->
     <header class='page-header'>
-      <div class='page-header__inner'>
-        <nav class='main-menu main-menu--closed'>
-          <div class='main-menu__logo'>PINK
-            <picture>
-              <source src='http://placehold.it/150x100'>
-            </picture>
+      <nav class='main-menu main-menu--closed'>
+        <div class="main-menu__inner">
+          <div class='main-menu__header'>
+            <div class='main-menu__header--inner'>
+              <div class='main-menu__logo'>PINK
+                <picture class="main-menu__logo-mobile">
+                  <source media='(min-width: 320px)' srcset='img/logo-pink-white-mobile.svg'>
+                  <img src='img/logo-pink-white-mobile.png' width='74' height='23'>
+                </picture>
+                <picture class="main-menu__logo-tablet">
+                  <source media='(min-width: 660px)' srcset='img/logotype-white-tablet.svg'>
+                  <img src='img/logotype-white-tablet.png' width='147' height='40'>
+                </picture>
+                <picture class="main-menu__logo-desktop">
+                  <source media='(min-width: 960px)' srcset='img/logotype-white-desktop.svg'>
+                  <img src='img/logotype-white-desktop.png' width='147' height='40'>
+                </picture>
+              </div>
+              <span class='main-menu__toggle main-menu__toggle--closed'>открыть меню</span>
+            </div>
           </div>
-          <span class='main-menu__toggle main-menu__toggle--closed'>открыть меню</span>
           <ul class='main-menu__list'>
             <li class='main-menu__item'>
               <a class='main-menu__link main-menu__link--active'>Главная</a>
@@ -30,8 +45,8 @@
               <a class='main-menu__link' href='#'>HTML academy</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <!-- основной контент -->
     <main class='page-content'>

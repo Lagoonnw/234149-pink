@@ -15,3 +15,24 @@
   padding-right: $right;
   padding-left: $left;
 }
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin wrapper() {
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: 660px) {
+    min-width: 660px;
+  }
+
+  @media (min-width: 960px) {
+    min-width: 960px;
+  }
+}

@@ -4,3 +4,11 @@
   @include font(0.875em, 700, 1.500em);
   color: $darkblue;
 }
+
+@media (min-width: 960px) {
+  .page-header {
+      position: fixed;
+      z-index: 10;
+      width: 100%;
+  }
+}
