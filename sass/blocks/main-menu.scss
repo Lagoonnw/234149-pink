@@ -72,6 +72,10 @@
   }
 }
 
+.main-menu__toggle {
+  font-size: 0;
+}
+
 @media (min-width: 660px) {
 
   .main-menu__header-inner {
@@ -84,12 +88,12 @@
     display: none;
   }
 
-  .main-menu__logo-tablet {
-    display: inline-block;
-  }
-
   .main-menu__logo-desktop {
   display: none;
+  }
+
+  .main-menu__logo-tablet {
+    display: inline-block;
   }
 }
 
@@ -120,12 +124,15 @@
 
   .main-menu__header {
   border-bottom: 1px solid transparent;
+  width: 300px;
   }
 
   .main-menu__header-inner {
   @include padding-rl(20px, 20px);
   display: flex;
   width: 920px;
+  flex-direction: row;
+  justify-content: space-between;
   }
    .main-menu__logo-mobile {
     display: none;
@@ -137,5 +144,9 @@
 
   .main-menu__logo-desktop {
   display: inline-block;
+  }
+
+  .main-menu__toggle {
+    display: none;
   }
 }
