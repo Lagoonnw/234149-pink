@@ -3,15 +3,42 @@
 .page-footer {
   @include font(0.875em, 400, 1.500em);
   color: $darkblue;
+  padding-top: 40px;
+}
+
+.page-footer-contacts__inner {
+  @include wrapper();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .page-footer-contacts__title {
   @include font(1.5em, 300, 1.5em*1.2);
-  color: $pink;
+  @include padding-rl(20px, 20px);
+  color: $darkblue;
   text-align: center;
 }
 
-.page-footer-contacts__map {
+.page-footer-contacts__contact-item {
+  width: 280px;
+  margin: auto;
+  padding-bottom: 20px;
+
+  & b {
+    display: block;
+    text-align: center;
+  }
+
+  & a {
+    display: block;
+    text-align: center;
+  }
+}
+
+.page-footer__map {
+  min-height: 200px;
   background-color: #eae6dd;
   background-image: url('../img/bg-map-mobile@1x.png');
   background-position: center;
@@ -21,17 +48,97 @@
 .page-footer-contacts__contact-item {
 
   b {
-    @include font(1.125em, 700, 1.125em*1.2);
+    @include font(18px, 700, 18px*1.2);
   }
 
   a {
-    @include font(1.5em, 300, 1.5em*1.2);
+    @include font(24px, 300, 24px*1.2);
     color: $pink;
     text-decoration: none;
   }
 
   p {
-    @include font(1.5em, 300, 1.5em*1.2);
+    @include font(24px, 300, 24px*1.2);
     color: $pink;
+    text-align: center;
+    margin: 0;
   }
+}
+
+.page-footer {
+
+  &--index .page-footer-socials {
+    display: none;
+  }
+}
+
+.page-footer {
+
+  &--inner .page-footer-contacts {
+    display: none;
+  }
+
+  &--inner .page-footer__map {
+    display: none;
+  }
+}
+
+.page-footer-socials__inner {
+  @include wrapper();
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.page-footer-socials__applogo {
+  font-size: 0;
+  margin: auto;
+}
+
+.footer-socials {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  min-width: 178px;
+  justify-content: space-between;
+
+  &--twitter {
+    background-image: url('../img/icon-twitter.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &--facebook {
+    background-image: url('../img/icon-facebook.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &--youtube {
+    background-image: url('../img/icon-youtube.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.page-footer-socials__copyrights {
+  margin: auto;
+}
+
+.footer-socials__item {
+  font-size: 0;
+  width: 45px;
+  height: 45px;
+  background-color: $white;
+  border-radius: 50%;
+  border: 3px solid #e9ebec;
+}
+
+.page-footer-socials__copyright-logo {
+  font-size: 0;
+  width: 27px;
+  height: 34px;
+  background-image: url('../img/logo-htmlacademy.svg');
+  background-repeat: no-repeat;
 }

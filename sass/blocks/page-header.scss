@@ -5,10 +5,10 @@
   color: $darkblue;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 660px) {
   .page-header {
-      position: fixed;
-      z-index: 10;
-      width: 100%;
+    width: 100%;
   }
 }
+
+

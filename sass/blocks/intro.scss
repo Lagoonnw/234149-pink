@@ -4,23 +4,82 @@
   background-color: $darkblue;
 }
 
-.intro__inner {
-  @include padding-rl(1.25em, 1.25em);
-}
-
 .intro__promo {
-  position: relative;
-  background-image: url('../img/bg-back-mobile@1x.jpg');
+  @include wrapper();
+  background-image: url('../img/iphone-hand-mobile@1x.png'),
+                    url('../img/bg-back-mobile@1x.jpg');
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom left,
+                       bottom center;
+  height: 462px;
+  margin: auto;
+  display: flex;
+
+  &--inner-page {
+    background-image: none,
+                      url('../img/bg-back-mobile@1x.jpg');
+  }
 }
 
 .intro__header {
-  @include font(1.5em, 300, 1.5em*1.2);
+  @include font(24px, 300, 24px*1.2);
   color: $white;
+  width: 220px;
   text-align: center;
+  padding-top: 73px;
+  margin-bottom:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .intro-downloads {
   background-color: $darkblue;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: 271px;
+}
+
+.intro-downloads__inner {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.intro-downloads__buttons {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 205px;
+  align-items: flex-end;
+  padding-top: 31px;
+
+}
+
+.intro-downloads__btn {
+  font-size:0;
+}
+
+.intro-downloads__text {
+  color: $white;
+  text-align: center;
+  width: 280px;
+  margin: auto;
+}
+
+
+@media (min-width: 660px) {
+
+  .intro__promo {
+    @include wrapper-fluid();
+    height: 729px;
+    background-position: bottom right,
+                         bottom center;
+  }
+
+  .intro__header {
+    width: 50%;
+  }
 }

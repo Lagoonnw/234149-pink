@@ -12,3 +12,7 @@
     display: none;
   }
 }
+
+@media (min-width: 660px) {
+  @include wrapper-fluid();
+}

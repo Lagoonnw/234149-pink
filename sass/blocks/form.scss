@@ -1,54 +1,309 @@
 @import 'variables.scss';
 
+.page-form {
+  @include wrapper();
+  display: flex;
+  flex-direction: column;
+}
+
 .page-form__title {
-  @include font(0.875em, 400, 1.875em);
+  @include font(14px, 400, 30px);
+  @include padding-rl(20px, 20px);
   text-align: center;
 }
 
 .fieldset-ID {
   background-color: $white;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 280px;
 }
 
 .fieldset-ID__label {
-  @include font(1.125em, 400, 1.875em);
-  color: $darkblue;
+  @include font(14px, 400, 30px);
+  color: $pink;
+  width: 100%;
+  text-transform: uppercase;
+  padding-left: 23px;
+}
+
+.fieldset-ID__input {
+  box-sizing: border-box;
+  border: 2px solid $lightgrey;
+  height: 59px;
+  padding-left: 20px;
+  width: 100%;
 }
 
 .fieldset-apps {
+  @include padding-rl(20px, 20px);
+  padding-top: 30px;
   background-color: $lightgrey;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 280px;
 
   legend {
-    @include font(0.875em, 400, 1.125em);
+    @include font(14px, 400, 18px);
+    padding-top: 100px;
     color: $pink;
     text-transform: uppercase;
+    text-align: center;
   }
 }
 
 .fieldset-apps__label {
-  @include font(1.125em, 400, 1.875em);
+  @include font(18px, 400, 30px);
   color: $darkblue;
+  position: relative;
+  padding-left: 56px;
 }
 
 .fieldset-achive {
+  @include padding-rl(20px, 20px);
+  padding-top: 30px;
   background-color: $lightgrey;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 530px;
+  justify-content: space-around;
 
   legend {
-    @include font(0.875em, 400, 1.125em);
+    @include font(14px, 400, 18px);
+    padding-top: 100px;
     color: $pink;
     text-transform: uppercase;
+    text-align: center;
   }
 }
 
 .fieldset-achive__label {
-  @include font(1.125em, 400, 1.875em);
+  @include font(18px, 400, 30px);
   color: $darkblue;
+  position: relative;
+  padding-left: 56px;
 }
 
 .fieldset-feedback {
+  @include padding-rl(20px, 20px);
+  padding-top: 40px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   legend {
-    @include font(0.875em, 400, 1.125em);
+    @include font(14px, 400, 18px);
     color: $pink;
     text-transform: uppercase;
+    text-align: center;
   }
 }
+
+.fieldset-achive__checkbox + .fieldset-achive__checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 23px;
+  height: 24px;
+  background-color: $white;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.fieldset-achive__checkbox:checked + .fieldset-achive__checkbox-indicator::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  width: 2px;
+  height: 8px;
+  background-color: $pink;
+  transform: rotate(-45deg);
+}
+
+.fieldset-achive__checkbox:checked + .fieldset-achive__checkbox-indicator::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 13px;
+  width: 2px;
+  height: 16px;
+  background-color: $pink;
+  transform: rotate(45deg);
+}
+.fieldset-achive__checkbox {
+  opacity: 0;
+}
+
+.fieldset-apps__radio + .fieldset-apps__radio-identificator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: $white;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+}
+
+.fieldset-apps__radio:checked + .fieldset-apps__radio-identificator::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $pink;
+}
+
+.fieldset-apps__radio {
+  opacity: 0;
+}
+
+.fieldset-feedback__text {
+  @include font(18px, 400, 30px);
+  padding: 20px;
+  color: $darkblue;
+  width: 276px;
+  border: 2px solid #e5e5e5;
+  min-height: 196px;
+  padding: 0;
+}
+
+.page-form__footnote {
+  text-align: center;;
+}
+
+@media (min-width: 660px) {
+
+  .page-form {
+    @include wrapper-fluid();
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .fieldset-ID {
+    @include padding-rl(20px, 20px);
+    background-color: $white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 620px;
+  }
+
+  .fieldset-ID__label {
+    padding-left: 0;
+    width: auto;
+  }
+
+  .fieldset-ID__input {
+    box-sizing: border-box;
+    width: auto;
+  }
+
+  .fieldset-achive {
+    @include padding-rl(20px, 20px);
+    background-color: $white;
+    border: 2px solid #e5e5e5;
+
+    legend {
+      @include padding-rl(30px, 30px);
+      padding-top: 0;
+    }
+  }
+
+  .fieldset-apps {
+    @include padding-rl(0, 0);
+    padding-top: 0;
+    background-color: $white;
+    border: 2px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 616px;
+    margin: auto;
+
+    legend {
+      @include font(14px, 400, 18px);
+      @include padding-rl(30px, 30px);
+      padding-top: 0;
+      color: $pink;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  .fieldset-achive {
+    @include padding-rl(0, 0);
+    padding-top: 30px;
+    background-color: $white;
+    border: 2px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 616px;
+    margin: auto;
+
+    legend {
+      @include font(14px, 400, 18px);
+      @include padding-rl(30px, 30px);
+      padding-top: 0;
+      color: $pink;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  .fieldset-feedback {
+    @include padding-rl(0, 0);
+    border: 2px solid #e5e5e5;
+    width: 616px;
+    margin: auto;
+
+    legend {
+      @include padding-rl(30px, 30px);
+      text-align: center;
+    }
+  }
+
+  .fieldset-feedback__text {
+    width: 496px;
+    min-height: 189px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .fieldset-achive__label {
+    padding-left: 115px;
+  }
+
+  .fieldset-apps__radio + .fieldset-apps__radio-identificator {
+    position: absolute;
+    top: 0;
+    left: 30px;
+  }
+
+  .fieldset-achive__checkbox + .fieldset-achive__checkbox-indicator {
+    left: 50px;
+  }
+
+  .fieldset-apps__label {
+    padding-left: 115px;
+  }
+
+}
+
+

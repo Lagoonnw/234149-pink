@@ -1,0 +1,10 @@
+.research {
+  display: none;
+  @include wrapper();
+}
+
+@media (min-width: 660px) {
+  .research {
+    display: block;
+  }
+}

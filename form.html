@@ -9,15 +9,28 @@
   </head>
   <body>
     <!-- Шапка сайта и основное меню-->
-    <header class='page-header'>
-      <div class='page-header__inner'>
-        <nav class='main-menu main-menu--closed'>
-          <div class='main-menu__logo'>PINK
-            <picture>
-              <source src='http://placehold.it/150x100'>
-            </picture>
+    <header class='page-header page-header--desktop'>
+      <nav class='main-menu main-menu--closed'>
+        <div class="main-menu__inner">
+          <div class='main-menu__header'>
+            <div class='main-menu__header-inner'>
+              <div class='main-menu__logo'>PINK
+                <picture class="main-menu__logo-mobile">
+                  <source media='(min-width: 320px)' srcset='img/logo-pink-white-mobile.svg'>
+                  <img src='img/logo-pink-white-mobile.png' width='74' height='23'>
+                </picture>
+                <picture class="main-menu__logo-tablet">
+                  <source media='(min-width: 660px)' srcset='img/logotype-white-tablet.svg'>
+                  <img src='img/logotype-white-tablet.png' width='147' height='40'>
+                </picture>
+                <picture class="main-menu__logo-desktop">
+                  <source media='(min-width: 960px)' srcset='img/logotype-white-desktop.svg'>
+                  <img src='img/logotype-white-desktop.png' width='147' height='40'>
+                </picture>
+              </div>
+              <span class='main-menu__toggle main-menu__toggle--closed'>открыть меню</span>
+            </div>
           </div>
-          <span class='main-menu__toggle main-menu__toggle--closed'>открыть меню</span>
           <ul class='main-menu__list'>
             <li class='main-menu__item'>
               <a class='main-menu__link' href='index.html'>Главная</a>
@@ -32,14 +45,14 @@
               <a class='main-menu__link' href='#'>HTML academy</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <!-- основной контент -->
     <main class='page-content'>
       <h1 class='page-content__h1 page-content__h1--visually-hidden'>Конкурс PINK</h1>
       <!-- Блок с фоновой промо-фотографией и заголовком -->
-      <section class='intro intro--form-page'>
+      <section class='intro intro--inner-page'>
         <div class='intro__promo'>
           <h2 class='intro__header'>Конкурс на самое безбашеное путешествие с Пинк</h2>
         </div>
@@ -48,15 +61,12 @@
       <form class='page-form' method='post' action='https://htmlacademy.ru/'>
         <p class='page-form__title'>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
         <fieldset class='fieldset-ID'>
-          <label class='fieldset-ID__label'>Фамилия:
-            <input class='fieldset-ID__input' type='text' id='last-name' name='last-name' placeholder='Укажите фамилию *' required>
-          </label>
-          <label class='fieldset-ID__label'>Имя:
-            <input class='fieldset-ID__input' type='text' id='first-name' name='first-name' placeholder='Введите ваше имя *' required>
-          </label>
-          <label class='fieldset-ID__label'>Имя:
-            <input class='fieldset-ID__input' type='text' id='patronymic' name='patronymic' placeholder='Ну и отчество тоже'>
-          </label>
+          <label class='fieldset-ID__label' for='last-name'>Фамилия:</label>
+          <input class='fieldset-ID__input' type='text' id='last-name' name='last-name' placeholder='Укажите фамилию *' required>
+          <label class='fieldset-ID__label' for='first-name'>Имя:</label>
+          <input class='fieldset-ID__input' type='text' id='first-name' name='first-name' placeholder='Введите ваше имя *' required>
+          <label class='fieldset-ID__label' for='patronymic'>Отчество:</label>
+          <input class='fieldset-ID__input' type='text' id='patronymic' name='patronymic' placeholder='Ну и отчество тоже'>
         </fieldset>
         <fieldset class='fieldset-achive'>
           <legend>Ваши безбашенные достижения в путешествии</legend>
@@ -86,12 +96,10 @@
           </label>
         </fieldset>
         <fieldset class='fieldset-ID'>
-          <label class='fieldset-ID__label'>Номер телефона
-            <input class='fieldset-ID__input' type='tel' id='phone-number' name='phone-number' placeholder='Номер, пожалуйста'>
-          </label>
-          <label class='fieldset-ID__label'>Адресок почты
-            <input class='fieldset-ID__input' type='email' id='email' name='email' placeholder='Введите почту *' required>
-          </label>
+          <label class='fieldset-ID__label' for='phone-number'>Номер телефона</label>
+          <input class='fieldset-ID__input' type='tel' id='phone-number' name='phone-number' placeholder='Номер, пожалуйста'>
+          <label class='fieldset-ID__label' for='email'>Адресок почты</label>
+          <input class='fieldset-ID__input' type='email' id='email' name='email' placeholder='Введите почту *' required>
         </fieldset>
         <fieldset class='fieldset-apps'>
           <legend>С каким приложением путешествовали?</legend>
@@ -117,44 +125,44 @@
       </form>
     </main>
     <!-- футер -->
-    <footer class='page-footer'>
-     <section class='page-footer-contacts'>
-      <div class='page-footer-contacts__inner'>
-        <p class='page-footer-contacts__title'>Остались вопросы? Свяжитесь с нами!</p>
-        <div class='page-footer-contacts__contact-item'>
-          <b>Звоните:</b>
-          <a href='tel:++78125556666'>+7 (812) 555-66-66</a>
+    <footer class='page-footer page-footer--inner'>
+      <section class='page-footer-contacts'>
+        <div class='page-footer-contacts__inner'>
+          <p class='page-footer-contacts__title'>Остались вопросы? <br>Свяжитесь с нами!</p>
+          <div class='page-footer-contacts__contact-item'>
+            <b>Звоните:</b>
+            <a href='tel:+78125556666'>+7 (812) 555-66-66</a>
+          </div>
+          <div class='page-footer-contacts__contact-item'>
+            <b>Пишите:</b>
+            <a href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a>
+          </div>
+          <div class='page-footer-contacts__contact-item'>
+            <b>Приезжайте в гости:</b>
+            <p>ул. Большая Конюшенная, 19/8</p>
+          </div>
         </div>
-        <div class='page-footer-contacts__contact-item'>
-          <b>Пишите:</b>
-          <a href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a>
+      </section>
+      <section class='page-footer__map'>
+        <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616492104!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1480145569718' frameborder='0' style='border:0' width="100%" allowfullscreen></iframe>
+      </section>
+      <section class='page-footer-socials'>
+        <div class='page-footer-socials__inner'>
+          <div class='page-footer-socials__applogo'>PINK
+            <a href='index.html'>
+              <img src='img/logo-pink-blue-mobile.svg' width='147' height='40'>
+            </a>
+          </div>
+          <section class='footer-socials'>
+            <a class='footer-socials__item footer-socials__item--twitter' href='http://twitter.com'>Twitter</a>
+            <a class='footer-socials__item footer-socials__item--facebook' href='http://facebook.com'>Facebook</a>
+            <a class='footer-socials__item footer-socials__item--youtube' href='http://youtube.com'>YouTube</a>
+          </section>
+          <div class='page-footer-socials__copyrights'>
+            <p>Разработано <span class='page-footer-socials__copyright-logo'>Html Academy</span></p>
+          </div>
         </div>
-        <div class='page-footer-contacts__contact-item'>
-          <b>Приезжайте в гости:</b>
-          <p>ул. Большая Конюшенная, 19/8</p>
-        </div>
-        <div class='page-footer-contacts__map'>
-          <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616492104!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1480145569718' frameborder='0' style='border:0' width='100%' allowfullscreen></iframe>
-        </div>
-      </div>
-     </section>
-     <section class='page-footer-socials'>
-       <div class='page-footer-socials__inner'>
-         <div class='page-footer-socials__applogo'>PINK
-           <picture>
-             <sourse src='http://placehold.it/150x100'></sourse>
-           </picture>
-         </div>
-         <section class='footer-socials'>
-           <a class='footer-socials__item footer-socials__item--twitter' href='http://twitter.com'>Twitter</a>
-           <a class='footer-socials__item footer-socials__item--facebook' href='http://facebook.com'>Facebook</a>
-           <a class='footer-socials__item footer-socials__item--youtube' href='http://youtube.com'>YouTube</a>
-         </section>
-         <div class='page-footer-socials__copyrights'>
-           <p>Разработано <span class='page-footer-socials__copyright-logo'>Html Academy</span></p>
-         </div>
-       </div>
-     </section>
+      </section>
     </footer>
   </body>
 </html>
