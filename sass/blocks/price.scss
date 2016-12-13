@@ -1,10 +1,12 @@
 @import 'variables.scss';
 
 .price {
-  @include wrapper();
   background-color: $lightgrey;
-  position: relative;
-  padding-bottom: 100px;
+}
+
+.price-tables__wrapper {
+  overflow: hidden;
+  max-width: 300%;
 }
 
 .price-table__header {
@@ -22,10 +24,6 @@
   }
 }
 
-.price-tables {
-  width: 300%;
-}
-
 .price-table {
   border-collapse: collapse;
 
@@ -36,12 +34,11 @@
 }
 
 .price-table__header {
-  width: 276px;
   border: 2px solid $lightgrey;
 }
 
-.price-table__header-wrapper {
-  width: 276px;
+.price-table__inner {
+  width: 25%;
   overflow: hidden;
 }
 
@@ -61,7 +58,7 @@
   text-transform: uppercase;
 }
 
-.price__control-btn {
+/*.price__control-btn {
   width: 6px;
   height: 6px;
   background-color: #b5b9be;
@@ -87,7 +84,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
+}*/
 
 .price-table__check {
   display: block;
@@ -114,4 +111,44 @@
 
 .price__toggle {
   opacity: 0;
+}
+
+@media (min-width: 660px) {
+
+  .price-tables {
+    @include wrapper();
+    @include padding-rl(20px, 20px);
+    box-sizing: border-box;
+  }
+
+  .price-tables__wrapper {
+    width: 100%;
+  }
+
+  .price-table__inner {
+    width: 25%;
+  }
+
+  .price-table__item {
+
+    &--mobile {
+      display: block;
+    }
+  }
+
+  .price-table__header {
+
+    &--mobile {
+      display: block;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .price-table__item {
+
+    &--table {
+      font-size: 0;
+    }
+  }
 }

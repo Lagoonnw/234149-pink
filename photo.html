@@ -13,7 +13,7 @@
         <div class="main-menu__inner">
           <div class='main-menu__header'>
             <div class='main-menu__header-inner'>
-              <div class='main-menu__logo'>PINK
+              <div class='main-menu__logo'>
                 <picture class="main-menu__logo-mobile">
                   <source media='(min-width: 320px)' srcset='img/logo-pink-white-mobile.svg'>
                   <img src='img/logo-pink-white-mobile.png' width='74' height='23'>
@@ -52,8 +52,8 @@
       <h1 class='page-content__h1 page-content__h1--visually-hidden'>Фотографии</h1>
       <!-- Блок с фоновой промо-фотографией и заголовком -->
       <section class='intro intro--inner-page'>
-        <div class='intro__promo'>
-          <h2 class='intro__header'>Фотографии пользователей</h2>
+        <div class='intro__promo intro__promo--inner-page'>
+          <h2 class='intro__header intro__header--inner-page'>Фотографии пользователей</h2>
         </div>
       </section>
       <!-- Фотографии пользователей -->
@@ -76,6 +76,7 @@
             </div>
           </section>
         </article>
+        <div class='gallery__inner'>
         <article class='img-post'>
           <div class='img-post__photo'>
             <a href='#'>
@@ -156,6 +157,7 @@
             </div>
           </section>
         </article>
+        </div>
         <p class='gallery__post-title'>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
       </section>
       <!-- Блок редактирования фото -->
@@ -186,10 +188,12 @@
                 <div class='photo-redactor__controller-toggle'></div>
               </div>
             </div>
+            <div class='photo-redactor__buttons'>
+              <button class='btn' type='submit'>Запостить</button>
+              <button class='btn btn--cancel' type='submit'>Отмена</button>
+            </div>
           </div>
         </div>
-        <button class='btn' type='submit'>Запостить</button>
-        <button class='btn btn--cancel' type='submit'>Отмена</button>
       </section>
     </main>
     <!-- футер -->

@@ -1,35 +1,49 @@
 @import 'variables.scss';
 
 .gallery {
-  @include wrapper();
   margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.gallery__inner {
+  @include wrapper();
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo-redactor__buttons {
+  @include wrapper();
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: auto;
 }
 
 .gallery__title,
 .gallery__post-title {
-  @include font(0.875em, 400, 1.875em);
-  @include padding-rl(40px, 40px);
+  @include font(14px, 400, 30px);
+  @include wrapper();
   text-align: center;
-
 }
 
 .img-post {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
-  margin: auto;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .img-post__photo {
   font-size: 0;
   line-height: 0;
-  width: 280px;
+  width: 100%;
 
   &--panorama {
     width: 100%;
@@ -51,9 +65,9 @@
 
 .img-post__post {
   background-color: $lightgrey;
-  padding: 20px;
-  padding-top: 0;
-  max-width: 240px;
+  padding: 0 20px 20px 20px;
+  max-width: 280px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -66,7 +80,6 @@
 
 .photo-redactor {
   background-color: $lightgrey;
-  padding-bottom: 41px;
 }
 
 .photo-redactor__inner {
@@ -85,8 +98,6 @@
 .photo-redactor__redactor-bar {
   margin-top: 43px;
   display: flex;
-  border-bottom: 1px solid #dddfe0;
-  padding-bottom: 50px;
   margin-bottom: 38px;
 }
 
@@ -177,6 +188,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .img-post__likes {
@@ -191,11 +203,23 @@
   margin-top: 0;
 }
 
+.photo-redactor__crop {
+  margin-bottom: 115px;
+}
+
+
 @media (min-width: 660px) {
 
   .gallery {
-    @include wrapper-fluid();
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .img-post {
+    width: 300px;
+
+    &--panorama {
+      width: 100%;
+    }
   }
 
   .img-post__photo {
@@ -204,31 +228,48 @@
     width: 300px;
 
     &--panorama {
-      width: 100%;
+      background-color: $pink;
       position: relative;
+      width: 100%;
+      height: 509px;
     }
   }
 
   .img-post__post {
-    max-width: 260px;
-    min-height: 135px;
+  background-color: $lightgrey;
+  padding: 20px;
+  max-width: 300px;
+  padding-top: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: flex-start;
 
-    &--panorama {
-      max-width: 580px;
-    }
+  &--panorama {
+    margin: auto;
+    max-width: 620px;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+}
+
+  .photo-redactor__buttons {
+    width: 100%;
+    padding: 0;
   }
 
   .photo-redactor__inner {
     flex-direction: row;
     margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .photo-redactor__redactor-bar {
     flex-direction: column;
     border: none;
     padding: 0;
-    flex-shrink: 2;
-    max-height: 200px;
   }
 
   .photo-redactor__crop,
@@ -237,6 +278,19 @@
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #dddfe0;
+  }
+
+  .photo-redactor__crop {
+    margin-bottom: 0;
+  }
+
+  .photo-redactor__paint,
+  .photo-redactor__contrast {
+    margin-top: 25px;
+  }
+
+  .photo-redactor__contrast {
+    margin-bottom: 65px;
   }
 
   .photo-redactor__paint {
@@ -278,8 +332,50 @@
     width: 276px;
   }
 
-  .photo-redactor__photo {
+  .gallery__title,
+  .gallery__post-title {
+    @include font(18px, 400, 30px);
+    @include padding-rl(95px, 95px);
+    text-align: center;
+  }
+}
 
+@media (min-width: 960px) {
+
+  .img-post__photo {
+
+    &--panorama {
+      background-color: $pink;
+      position: relative;
+      width: 100%;
+      height: 506px;
+    }
+  }
+
+  .img-post__post {
+
+    &--panorama {
+      margin: auto;
+      max-width: 940px;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+  }
+
+  .photo-redactor__redactor-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    padding: 0;
+    width: 410px;
+  }
+
+  .photo-redactor__buttons {
+    width: 410px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 

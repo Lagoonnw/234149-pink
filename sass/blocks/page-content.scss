@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 .page-content {
-  @include font(0.875em, 400, 1.500em);
+  @include font(14px, 400, 24px);
   color: $darkblue;
 }
 

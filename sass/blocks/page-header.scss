@@ -1,12 +1,19 @@
 @import 'variables.scss';
 
 .page-header {
-  @include font(0.875em, 700, 1.500em);
+  @include font(18px, 700, 32px);
   color: $darkblue;
 }
 
 @media (min-width: 660px) {
   .page-header {
+    width: 100%;
+  }
+}
+
+@media (min-width: 960px)  {
+  .page-header {
+    position: absolute;
     width: 100%;
   }
 }

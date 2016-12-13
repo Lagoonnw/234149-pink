@@ -13,7 +13,7 @@
         <div class="main-menu__inner">
           <div class='main-menu__header'>
             <div class='main-menu__header-inner'>
-              <div class='main-menu__logo'>PINK
+              <div class='main-menu__logo'>
                 <picture class="main-menu__logo-mobile">
                   <source media='(min-width: 320px)' srcset='img/logo-pink-white-mobile.svg'>
                   <img src='img/logo-pink-white-mobile.png' width='74' height='23'>
@@ -52,75 +52,78 @@
       <h1 class='page-content__h1 page-content__h1--visually-hidden'>Конкурс PINK</h1>
       <!-- Блок с фоновой промо-фотографией и заголовком -->
       <section class='intro intro--inner-page'>
-        <div class='intro__promo'>
-          <h2 class='intro__header'>Конкурс на самое безбашеное путешествие с Пинк</h2>
+        <div class='intro__promo intro__promo--inner-page'>
+          <h2 class='intro__header intro__header--inner-page'>Конкурс на самое безбашеное путешествие с Пинк</b>
         </div>
       </section>
       <!-- форма для отправки -->
       <form class='page-form' method='post' action='https://htmlacademy.ru/'>
         <p class='page-form__title'>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
-        <fieldset class='fieldset-ID'>
-          <label class='fieldset-ID__label' for='last-name'>Фамилия:</label>
-          <input class='fieldset-ID__input' type='text' id='last-name' name='last-name' placeholder='Укажите фамилию *' required>
-          <label class='fieldset-ID__label' for='first-name'>Имя:</label>
-          <input class='fieldset-ID__input' type='text' id='first-name' name='first-name' placeholder='Введите ваше имя *' required>
-          <label class='fieldset-ID__label' for='patronymic'>Отчество:</label>
-          <input class='fieldset-ID__input' type='text' id='patronymic' name='patronymic' placeholder='Ну и отчество тоже'>
-        </fieldset>
-        <fieldset class='fieldset-achive'>
-          <legend>Ваши безбашенные достижения в путешествии</legend>
-          <label class='fieldset-achive__label'>Сделал селфи с акулой
-            <input class='fieldset-achive__checkbox' type='checkbox' id='selfie' name='selfie' checked>
-            <span class='fieldset-achive__checkbox-indicator'></span>
+        <div class='field-ID'>
+          <label class='field-ID__label' for='last-name'>Фамилия:</label>
+          <input class='field-ID__input' type='text' id='last-name' name='last-name' placeholder='Укажите фамилию *' required>
+          <label class='field-ID__label' for='first-name'>Имя:</label>
+          <input class='field-ID__input' type='text' id='first-name' name='first-name' placeholder='Введите ваше имя *' required>
+          <label class='field-ID__label' for='patronymic'>Отчество:</label>
+          <input class='field-ID__input' type='text' id='patronymic' name='patronymic' placeholder='Ну и отчество тоже'>
+        </div>
+        <div class='field-achive'>
+          <h2>Ваши безбашенные достижения в путешествии</h2>
+          <label class='field-achive__label'>Сделал селфи с акулой
+            <input class='field-achive__checkbox' type='checkbox' id='selfie' name='selfie' checked>
+            <span class='field-achive__checkbox-indicator'></span>
           </label>
-          <label class='fieldset-achive__label'>Обгорел на пляже
-            <input class='fieldset-achive__checkbox' type='checkbox' id='sunburn' name='sunburn' checked>
-            <span class='fieldset-achive__checkbox-indicator'></span>
+          <label class='field-achive__label'>Обгорел на пляже
+            <input class='field-achive__checkbox' type='checkbox' id='sunburn' name='sunburn' checked>
+            <span class='field-achive__checkbox-indicator'></span>
           </label>
-          <label class='fieldset-achive__label'>Видел Чака Норриса
-            <input class='fieldset-achive__checkbox' type='checkbox' id='chack-norris' name='chack-norris'>
-            <span class='fieldset-achive__checkbox-indicator'></span>
+          <label class='field-achive__label'>Видел Чака Норриса
+            <input class='field-achive__checkbox' type='checkbox' id='chack-norris' name='chack-norris'>
+            <span class='field-achive__checkbox-indicator'></span>
           </label>
-          <label class='fieldset-achive__label'>Накупил сувениров
-            <input class='fieldset-achive__checkbox' type='checkbox' id='souvenirs' name='souvenirs'>
-            <span class='fieldset-achive__checkbox-indicator'></span>
+          <label class='field-achive__label'>Накупил сувениров
+            <input class='field-achive__checkbox' type='checkbox' id='souvenirs' name='souvenirs'>
+            <span class='field-achive__checkbox-indicator'></span>
           </label>
-          <label class='fieldset-achive__label'>Удержал башню
-            <input class='fieldset-achive__checkbox' type='checkbox' id='tower' name='tower'>
-            <span class='fieldset-achive__checkbox-indicator'></span>
+          <label class='field-achive__label'>Удержал башню
+            <input class='field-achive__checkbox' type='checkbox' id='tower' name='tower'>
+            <span class='field-achive__checkbox-indicator'></span>
           </label>
-          <label class='fieldset-achive__label'>Разгромил отель
-            <input class='fieldset-achive__checkbox' type='checkbox' id='crush-hotel' name='crush-hotel' checked>
-            <span class='fieldset-achive__checkbox-indicator'></span>
+          <label class='field-achive__label'>Разгромил отель
+            <input class='field-achive__checkbox' type='checkbox' id='crush-hotel' name='crush-hotel' checked>
+            <span class='field-achive__checkbox-indicator'></span>
           </label>
-        </fieldset>
-        <fieldset class='fieldset-ID'>
-          <label class='fieldset-ID__label' for='phone-number'>Номер телефона</label>
-          <input class='fieldset-ID__input' type='tel' id='phone-number' name='phone-number' placeholder='Номер, пожалуйста'>
-          <label class='fieldset-ID__label' for='email'>Адресок почты</label>
-          <input class='fieldset-ID__input' type='email' id='email' name='email' placeholder='Введите почту *' required>
-        </fieldset>
-        <fieldset class='fieldset-apps'>
-          <legend>С каким приложением путешествовали?</legend>
-          <label class='fieldset-apps__label'>Pink для iOS
-            <input class='fieldset-apps__radio' type='radio' id='iOS' name='radio' checked>
-            <span class='fieldset-apps__radio-identificator'></span>
+        </div>
+        <div class='field-ID field-ID--tablet'>
+          <h2>Контактная информация</h2>
+          <label class='field-ID__label field-ID__label--tel' for='phone-number'>Номер телефона</label>
+          <input class='field-ID__input field-ID__input--tel' type='tel' id='phone-number' name='phone-number' placeholder='Номер, пожалуйста'>
+          <label class='field-ID__label field-ID__label--mail' for='email'>Адресок почты</label>
+          <input class='field-ID__input field-ID__input--mail' type='email' id='email' name='email' placeholder='Введите почту *' required>
+        </div>
+        <div class='field-apps field-apps--tablet'>
+          <h2>С каким приложением путешествовали?</h2>
+          <label class='field-apps__label'>Pink для iOS
+            <input class='field-apps__radio' type='radio' id='iOS' name='radio' checked>
+            <span class='field-apps__radio-identificator'></span>
           </label>
-          <label class='fieldset-apps__label'>Pink для Android
-            <input class='fieldset-apps__radio' type='radio' id='android' name='radio'>
-            <span class='fieldset-apps__radio-identificator'></span>
+          <label class='field-apps__label'>Pink для Android
+            <input class='field-apps__radio' type='radio' id='android' name='radio'>
+            <span class='field-apps__radio-identificator'></span>
           </label>
-          <label class='fieldset-apps__label'>Windows Phone
-            <input class='fieldset-apps__radio' type='radio' id='winphone' name='radio'>
-            <span class='fieldset-apps__radio-identificator'></span>
+          <label class='field-apps__label'>Windows Phone
+            <input class='field-apps__radio' type='radio' id='winphone' name='radio'>
+            <span class='field-apps__radio-identificator'></span>
           </label>
-        </fieldset>
-        <fieldset class='fieldset-feedback'>
-          <legend>Опишите свои эмоции</legend>
-          <textarea class='fieldset-feedback__text'>Можно прям в красках, не стесняясь в выражениях</textarea>
-        </fieldset>
-        <button class='btn btn--form-btn' type='submit'>Отправить форму</button>
-        <small class='page-form__footnote'><span>*</span> — обязательные поля</small>
+        </div>
+        <div class='field-feedback'>
+          <h2>Опишите свои эмоции</h2>
+          <textarea class='field-feedback__text'>Можно прям в красках, не стесняясь в выражениях</textarea>
+        </div>
+        <div class='field-btn'>
+          <button class='btn btn--form-btn' type='submit'>Отправить форму</button>
+          <small class='page-form__footnote'><span>*</span> — обязательные поля</small>
+        </div>
       </form>
     </main>
     <!-- футер -->

@@ -12,17 +12,21 @@
   text-align: center;
 }
 
-.fieldset-ID {
+.field-ID {
+  @include padding-tb(30px, 40px);
   background-color: $white;
-  border: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
   width: 280px;
+
+  h2 {
+    display: none;
+  }
 }
 
-.fieldset-ID__label {
+.field-ID__label {
   @include font(14px, 400, 30px);
   color: $pink;
   width: 100%;
@@ -30,7 +34,7 @@
   padding-left: 23px;
 }
 
-.fieldset-ID__input {
+.field-ID__input {
   box-sizing: border-box;
   border: 2px solid $lightgrey;
   height: 59px;
@@ -38,68 +42,65 @@
   width: 100%;
 }
 
-.fieldset-apps {
+.field-apps {
   @include padding-rl(20px, 20px);
-  padding-top: 30px;
+  @include padding-tb(30px, 40px);
   background-color: $lightgrey;
-  border: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-  min-height: 280px;
+  justify-content: space-between;
+  min-height: 250px;
 
-  legend {
+  h2 {
     @include font(14px, 400, 18px);
-    padding-top: 100px;
+    @include padding-rl(30px, 30px);
     color: $pink;
     text-transform: uppercase;
     text-align: center;
   }
 }
 
-.fieldset-apps__label {
+.field-apps__label {
   @include font(18px, 400, 30px);
   color: $darkblue;
   position: relative;
   padding-left: 56px;
 }
 
-.fieldset-achive {
+.field-achive {
   @include padding-rl(20px, 20px);
-  padding-top: 30px;
+  @include padding-tb(30px, 40px);
   background-color: $lightgrey;
-  border: none;
   display: flex;
   flex-direction: column;
-  min-height: 530px;
-  justify-content: space-around;
+  min-height: 450px;
+  justify-content: space-between;
 
-  legend {
+  h2 {
     @include font(14px, 400, 18px);
-    padding-top: 100px;
+    @include padding-rl(30px, 30px);
     color: $pink;
     text-transform: uppercase;
     text-align: center;
   }
 }
 
-.fieldset-achive__label {
+.field-achive__label {
   @include font(18px, 400, 30px);
   color: $darkblue;
   position: relative;
   padding-left: 56px;
 }
 
-.fieldset-feedback {
+.field-feedback {
   @include padding-rl(20px, 20px);
-  padding-top: 40px;
-  border: none;
+  @include padding-tb(30px, 40px);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
-  legend {
+  h2 {
     @include font(14px, 400, 18px);
     color: $pink;
     text-transform: uppercase;
@@ -107,7 +108,7 @@
   }
 }
 
-.fieldset-achive__checkbox + .fieldset-achive__checkbox-indicator {
+.field-achive__checkbox + .field-achive__checkbox-indicator {
   position: absolute;
   top: 0;
   left: 0;
@@ -119,7 +120,7 @@
   cursor: pointer;
 }
 
-.fieldset-achive__checkbox:checked + .fieldset-achive__checkbox-indicator::before {
+.field-achive__checkbox:checked + .field-achive__checkbox-indicator::before {
   content: '';
   position: absolute;
   top: 11px;
@@ -130,7 +131,7 @@
   transform: rotate(-45deg);
 }
 
-.fieldset-achive__checkbox:checked + .fieldset-achive__checkbox-indicator::after {
+.field-achive__checkbox:checked + .field-achive__checkbox-indicator::after {
   content: '';
   position: absolute;
   top: 5px;
@@ -140,11 +141,11 @@
   background-color: $pink;
   transform: rotate(45deg);
 }
-.fieldset-achive__checkbox {
+.field-achive__checkbox {
   opacity: 0;
 }
 
-.fieldset-apps__radio + .fieldset-apps__radio-identificator {
+.field-apps__radio + .field-apps__radio-identificator {
   position: absolute;
   top: 0;
   left: 0;
@@ -156,7 +157,7 @@
   border: 2px solid #e5e5e5;
 }
 
-.fieldset-apps__radio:checked + .fieldset-apps__radio-identificator::after {
+.field-apps__radio:checked + .field-apps__radio-identificator::after {
   content: '';
   position: absolute;
   top: 10px;
@@ -167,143 +168,359 @@
   background-color: $pink;
 }
 
-.fieldset-apps__radio {
+.field-apps__radio {
   opacity: 0;
 }
 
-.fieldset-feedback__text {
+.field-feedback__text {
   @include font(18px, 400, 30px);
   padding: 20px;
   color: $darkblue;
-  width: 276px;
   border: 2px solid #e5e5e5;
   min-height: 196px;
   padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .page-form__footnote {
-  text-align: center;;
+  text-align: center;
+}
+
+.field-btn {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+.page-form__footnote {
+  @include font(14px, 400, 30px);
+  margin: auto;
+  text-transform: uppercase;
+
+  span {
+    color: $pink;
+  }
 }
 
 @media (min-width: 660px) {
 
   .page-form {
     @include wrapper-fluid();
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .page-form__title {
+    @include font(18px, 400, 30px);
+    @include padding-rl(65px, 65px);
+    @include padding-tb(70px, 40px);
+    text-align: center;
+    order: 0;
+  }
+
+  .field-ID {
+    @include padding-tb(30px, 40px);
+    @include padding-rl(20px, 20px);
+    min-width: 620px;
+    background-color: $white;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    order: 1;
+
+    &--tablet {
+      @include padding-tb(0, 40px);
+      min-width: 576px;
+      border: 2px solid $lightgrey;
+      order: 3;
+      margin-bottom: 40px;
+
+      h2 {
+        @include font(14px, 400, 18px);
+        @include padding-rl(30px, 30px);
+        color: $pink;
+        text-transform: uppercase;
+        background-color: $white;
+        margin-top: -10px;
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 
-  .fieldset-ID {
-    @include padding-rl(20px, 20px);
-    background-color: $white;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 620px;
-  }
-
-  .fieldset-ID__label {
-    padding-left: 0;
+  .field-ID__label {
+    @include font(14px, 400, 14px);
+    @include padding-rl(20px, 0px);
+    color: $pink;
     width: auto;
+    text-transform: uppercase;
+    padding-top: 15px;
+    flex-grow: 1;
+
+    &--tel {
+      margin-left: 20px;
+      margin-bottom: 30px;
+      width: 100%;
+      order: 1;
+    }
+
+    &--mail {
+      margin-left: 20px;
+      margin-bottom: 30px;
+      width: 100%;
+      order: 3;
+    }
   }
 
-  .fieldset-ID__input {
+  .field-ID__input {
+    @include font(18px, 400, 30px);
     box-sizing: border-box;
-    width: auto;
-  }
+    border: 2px solid $lightgrey;
+    height: 59px;
+    padding-left: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    flex-grow: 2;
+    margin-bottom: 50px;
 
-  .fieldset-achive {
-    @include padding-rl(20px, 20px);
-    background-color: $white;
-    border: 2px solid #e5e5e5;
+    &--tel {
+      margin-bottom: 0;
+      position: relative;
+      padding-right: 60px;
+      order: 0;
+    }
 
-    legend {
-      @include padding-rl(30px, 30px);
-      padding-top: 0;
+    &--mail {
+      margin-bottom: 0;
+      width: 415px;
+      padding-right: 60px;
+      position: relative;
+      order: 2;
     }
   }
 
-  .fieldset-apps {
-    @include padding-rl(0, 0);
-    padding-top: 0;
+  .field-achive {
+    @include padding-rl(20px, 20px);
+    @include padding-tb(0, 40px);
     background-color: $white;
-    border: 2px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    width: 576px;
+    justify-content: space-between;
+    border: 2px solid $lightgrey;
+    margin: auto;
+    margin-bottom: 40px;
+    order: 4;
+
+    h2 {
+      @include font(14px, 400, 18px);
+      @include padding-rl(30px, 30px);
+      color: $pink;
+      text-transform: uppercase;
+      background-color: $white;
+      margin-top: -10px;
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .field-achive__label {
+    @include font(18px, 400, 30px);
+    color: $darkblue;
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .field-apps {
+    @include padding-rl(20px, 20px);
+    @include padding-tb(0, 40px);
+    background-color: $white;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 616px;
+    justify-content: space-between;
+    min-height: 250px;
+    width: 576px;
+    border: 2px solid $lightgrey;
     margin: auto;
+    margin-bottom: 65px;
+    order: 2;
 
-    legend {
+    h2 {
       @include font(14px, 400, 18px);
       @include padding-rl(30px, 30px);
-      padding-top: 0;
       color: $pink;
       text-transform: uppercase;
-      text-align: center;
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -10px;
+      background-color: $white;
     }
   }
 
-  .fieldset-achive {
-    @include padding-rl(0, 0);
-    padding-top: 30px;
-    background-color: $white;
-    border: 2px solid #e5e5e5;
+  .field-apps__label {
+    @include font(18px, 400, 30px);
+    color: $darkblue;
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .field-feedback {
+    @include padding-rl(20px, 20px);
+    @include padding-tb(0, 40px);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 616px;
+    flex-wrap: wrap;
+    order: 5;
+    border: 2px solid $lightgrey;
+    width: 576px;
     margin: auto;
+    margin-bottom: 40px;
 
-    legend {
+    h2 {
       @include font(14px, 400, 18px);
       @include padding-rl(30px, 30px);
-      padding-top: 0;
       color: $pink;
       text-transform: uppercase;
-      text-align: center;
+      background-color: $white;
+      margin-top: -10px;
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
-  .fieldset-feedback {
-    @include padding-rl(0, 0);
+  .field-feedback__text {
+    @include font(18px, 400, 30px);
+    padding: 20px;
+    color: $darkblue;
     border: 2px solid #e5e5e5;
-    width: 616px;
-    margin: auto;
-
-    legend {
-      @include padding-rl(30px, 30px);
-      text-align: center;
-    }
+    min-height: 196px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .fieldset-feedback__text {
-    width: 496px;
-    min-height: 189px;
-    margin: auto;
-    margin-bottom: 50px;
+  .field-btn {
+    @include wrapper-fluid();
+    order: 6;
+    flex-direction: row;
+    justify-content: space-between;
   }
-
-  .fieldset-achive__label {
-    padding-left: 115px;
-  }
-
-  .fieldset-apps__radio + .fieldset-apps__radio-identificator {
-    position: absolute;
-    top: 0;
-    left: 30px;
-  }
-
-  .fieldset-achive__checkbox + .fieldset-achive__checkbox-indicator {
-    left: 50px;
-  }
-
-  .fieldset-apps__label {
-    padding-left: 115px;
-  }
-
 }
 
+@media (min-width: 960px) {
+  .page-form {
+    @include wrapper();
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+  }
 
+  .field-apps {
+    @include padding-rl(0, 0);
+    width: 42%;
+  }
+
+  .field-ID {
+    @include padding-tb(30px, 40px);
+    @include padding-rl(0, 0);
+    min-width: 45%;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 1;
+
+    &--tablet {
+      @include padding-rl(58, 58px);
+      min-width: 820px;
+      border: 2px solid $lightgrey;
+      order: 3;
+      margin-bottom: 40px;
+    }
+  }
+
+  .field-ID__input {
+    @include font(18px, 400, 30px);
+    box-sizing: border-box;
+    border: 2px solid $lightgrey;
+    height: 59px;
+    padding-left: 20px;
+    width: 70%;
+    box-sizing: border-box;
+    flex-grow: 2;
+    margin-bottom: 50px;
+
+    &--tel {
+      width: 40%;
+      margin-bottom: 0;
+      position: relative;
+      padding-right: 60px;
+      order: 0;
+    }
+
+    &--mail {
+      margin-bottom: 0;
+      width: 40%;
+      padding-right: 60px;
+      position: relative;
+      order: 2;
+    }
+  }
+
+  .field-achive {
+    @include wrapper();
+    padding: 0 58px;
+    box-sizing: border-box;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 230px;
+    justify-content: space-between;
+    border: 2px solid $lightgrey;
+    margin-bottom: 40px;
+    order: 4;
+
+    h2 {
+      @include font(14px, 400, 30px);
+      @include padding-rl(30px, 30px);
+      color: $pink;
+      text-transform: uppercase;
+      background-color: $white;
+      margin-top: -15px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      text-align: center;
+    }
+  }
+
+  .field-achive__label {
+    @include font(18px, 400, 30px);
+    color: $darkblue;
+    position: relative;
+    margin-left: 0;
+    width: 25%
+  }
+
+  .field-feedback {
+    @include wrapper();
+    padding: 40px 40px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  .field-btn {
+    @include wrapper();
+  }
+}
