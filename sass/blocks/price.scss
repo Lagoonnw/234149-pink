@@ -6,7 +6,9 @@
 
 .price-tables__wrapper {
   overflow: hidden;
-  max-width: 300%;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .price-table__header {
@@ -26,6 +28,7 @@
 
 .price-table {
   border-collapse: collapse;
+  width: 300%;
 
   td {
     background-color: $white;
@@ -151,4 +154,10 @@
       font-size: 0;
     }
   }
+
+  .price-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
 }
