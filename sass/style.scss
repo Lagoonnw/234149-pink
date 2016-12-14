@@ -1,12 +1,15 @@
+@import 'normalize.scss';
 @import 'global/fonts.scss';
 @import 'variables.scss';
 @import 'mixins.scss';
+@import 'scaffolding.scss';
 
 @import 'blocks/page-header.scss';
 @import 'blocks/main-menu.scss';
 @import 'blocks/page-content.scss';
 @import 'blocks/intro.scss';
 @import 'blocks/features.scss';
+@import 'blocks/research.scss';
 @import 'blocks/reviews.scss';
 @import 'blocks/price.scss';
 @import 'blocks/page-footer.scss';

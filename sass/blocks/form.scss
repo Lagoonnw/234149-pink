@@ -1,54 +1,568 @@
 @import 'variables.scss';
 
+.page-form {
+  @include wrapper();
+  display: flex;
+  flex-direction: column;
+}
+
 .page-form__title {
-  @include font(0.875em, 400, 1.875em);
+  @include font(14px, 400, 30px);
+  @include padding-rl(20px, 20px);
   text-align: center;
 }
 
-.fieldset-ID {
+.field-ID {
+  @include padding-tb(30px, 40px);
   background-color: $white;
-}
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 280px;
 
-.fieldset-ID__label {
-  @include font(1.125em, 400, 1.875em);
-  color: $darkblue;
-}
-
-.fieldset-apps {
-  background-color: $lightgrey;
-
-  legend {
-    @include font(0.875em, 400, 1.125em);
-    color: $pink;
-    text-transform: uppercase;
+  h2 {
+    display: none;
   }
 }
 
-.fieldset-apps__label {
-  @include font(1.125em, 400, 1.875em);
-  color: $darkblue;
+.field-ID__label {
+  @include font(14px, 400, 30px);
+  color: $pink;
+  width: 100%;
+  text-transform: uppercase;
+  padding-left: 23px;
 }
 
-.fieldset-achive {
-  background-color: $lightgrey;
+.field-ID__input {
+  box-sizing: border-box;
+  border: 2px solid $lightgrey;
+  height: 59px;
+  padding-left: 20px;
+  width: 100%;
+}
 
-  legend {
-    @include font(0.875em, 400, 1.125em);
+.field-apps {
+  @include padding-rl(20px, 20px);
+  @include padding-tb(30px, 40px);
+  background-color: $lightgrey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 250px;
+
+  h2 {
+    @include font(14px, 400, 18px);
+    @include padding-rl(30px, 30px);
     color: $pink;
     text-transform: uppercase;
+    text-align: center;
   }
 }
 
-.fieldset-achive__label {
-  @include font(1.125em, 400, 1.875em);
+.field-apps__label {
+  @include font(18px, 400, 30px);
   color: $darkblue;
+  position: relative;
+  padding-left: 56px;
 }
 
-.fieldset-feedback {
+.field-achive {
+  @include padding-rl(20px, 20px);
+  @include padding-tb(30px, 40px);
+  background-color: $lightgrey;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  justify-content: space-between;
 
-  legend {
-    @include font(0.875em, 400, 1.125em);
+  h2 {
+    @include font(14px, 400, 18px);
+    @include padding-rl(30px, 30px);
     color: $pink;
     text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.field-achive__label {
+  @include font(18px, 400, 30px);
+  color: $darkblue;
+  position: relative;
+  padding-left: 56px;
+}
+
+.field-feedback {
+  @include padding-rl(20px, 20px);
+  @include padding-tb(30px, 40px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  h2 {
+    @include font(14px, 400, 18px);
+    color: $pink;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.field-achive__checkbox + .field-achive__checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 23px;
+  height: 24px;
+  background-color: $white;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.field-achive__checkbox:checked + .field-achive__checkbox-indicator::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  width: 2px;
+  height: 8px;
+  background-color: $pink;
+  transform: rotate(-45deg);
+}
+
+.field-achive__checkbox:checked + .field-achive__checkbox-indicator::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 13px;
+  width: 2px;
+  height: 16px;
+  background-color: $pink;
+  transform: rotate(45deg);
+}
+.field-achive__checkbox {
+  opacity: 0;
+}
+
+.field-apps__radio + .field-apps__radio-identificator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: $white;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+}
+
+.field-apps__radio:checked + .field-apps__radio-identificator::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $pink;
+}
+
+.field-apps__radio {
+  opacity: 0;
+}
+
+.field-feedback__text {
+  @include font(18px, 400, 30px);
+  padding: 20px;
+  color: $darkblue;
+  border: 2px solid #e5e5e5;
+  min-height: 196px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-form__footnote {
+  text-align: center;
+}
+
+.field-btn {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+.page-form__footnote {
+  @include font(14px, 400, 30px);
+  margin: auto;
+  text-transform: uppercase;
+
+  span {
+    color: $pink;
+  }
+}
+
+@media (min-width: 660px) {
+
+  .page-form {
+    @include wrapper-fluid();
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .page-form__title {
+    @include font(18px, 400, 30px);
+    @include padding-rl(65px, 65px);
+    @include padding-tb(70px, 40px);
+    text-align: center;
+    order: 0;
+  }
+
+  .field-ID {
+    @include padding-tb(30px, 40px);
+    @include padding-rl(20px, 20px);
+    min-width: 620px;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 1;
+
+    &--tablet {
+      @include padding-tb(0, 40px);
+      min-width: 576px;
+      border: 2px solid $lightgrey;
+      order: 3;
+      margin-bottom: 40px;
+
+      h2 {
+        @include font(14px, 400, 18px);
+        @include padding-rl(30px, 30px);
+        color: $pink;
+        text-transform: uppercase;
+        background-color: $white;
+        margin-top: -10px;
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .field-ID__label {
+    @include font(14px, 400, 14px);
+    @include padding-rl(20px, 0px);
+    color: $pink;
+    width: auto;
+    text-transform: uppercase;
+    padding-top: 15px;
+    flex-grow: 1;
+
+    &--tel {
+      margin-left: 20px;
+      margin-bottom: 30px;
+      width: 100%;
+      order: 1;
+    }
+
+    &--mail {
+      margin-left: 20px;
+      margin-bottom: 30px;
+      width: 100%;
+      order: 3;
+    }
+  }
+
+  .field-ID__input {
+    @include font(18px, 400, 30px);
+    box-sizing: border-box;
+    border: 2px solid $lightgrey;
+    height: 59px;
+    padding-left: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    flex-grow: 2;
+    margin-bottom: 50px;
+
+    &--tel {
+      margin-bottom: 0;
+      position: relative;
+      padding-right: 60px;
+      order: 0;
+    }
+
+    &--mail {
+      margin-bottom: 0;
+      width: 415px;
+      padding-right: 60px;
+      position: relative;
+      order: 2;
+    }
+  }
+
+  .field-achive {
+    @include padding-rl(20px, 20px);
+    @include padding-tb(0, 40px);
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    width: 576px;
+    justify-content: space-between;
+    border: 2px solid $lightgrey;
+    margin: auto;
+    margin-bottom: 40px;
+    order: 4;
+
+    h2 {
+      @include font(14px, 400, 18px);
+      @include padding-rl(30px, 30px);
+      color: $pink;
+      text-transform: uppercase;
+      background-color: $white;
+      margin-top: -10px;
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .field-achive__label {
+    @include font(18px, 400, 30px);
+    color: $darkblue;
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .field-apps {
+    @include padding-rl(20px, 20px);
+    @include padding-tb(0, 40px);
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 250px;
+    width: 576px;
+    border: 2px solid $lightgrey;
+    margin: auto;
+    margin-bottom: 65px;
+    order: 2;
+
+    h2 {
+      @include font(14px, 400, 18px);
+      @include padding-rl(30px, 30px);
+      color: $pink;
+      text-transform: uppercase;
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -10px;
+      background-color: $white;
+    }
+  }
+
+  .field-apps__label {
+    @include font(18px, 400, 30px);
+    color: $darkblue;
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .field-feedback {
+    @include padding-rl(20px, 20px);
+    @include padding-tb(0, 40px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    order: 5;
+    border: 2px solid $lightgrey;
+    width: 576px;
+    margin: auto;
+    margin-bottom: 40px;
+
+    h2 {
+      @include font(14px, 400, 18px);
+      @include padding-rl(30px, 30px);
+      color: $pink;
+      text-transform: uppercase;
+      background-color: $white;
+      margin-top: -10px;
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .field-feedback__text {
+    @include font(18px, 400, 30px);
+    padding: 20px;
+    color: $darkblue;
+    border: 2px solid #e5e5e5;
+    min-height: 196px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .field-btn {
+    @include wrapper-fluid();
+    order: 6;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 960px) {
+  .page-form {
+    @include wrapper();
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .field-apps {
+    @include padding-rl(0, 0);
+    width: 42%;
+  }
+
+  .field-ID {
+    @include padding-tb(30px, 40px);
+    @include padding-rl(0, 0);
+    box-sizing: border-box;
+    min-width: 45%;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 1;
+
+    &--tablet {
+      padding: 0 58px;
+      min-width: 100%;
+      border: 2px solid $lightgrey;
+      order: 3;
+      margin-bottom: 40px;
+      height: auto;
+      justify-content: space-between;
+    }
+
+    h2 {
+      @include font(14px, 400, 18px);
+      @include padding-rl(30px, 30px);
+      color: $pink;
+      text-transform: uppercase;
+      background-color: $white;
+      margin-top: -10px;
+      display: inline-flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+
+  .field-ID__input {
+    @include font(18px, 400, 30px);
+    box-sizing: border-box;
+    border: 2px solid $lightgrey;
+    height: 59px;
+    padding-left: 20px;
+    width: 70%;
+    box-sizing: border-box;
+    flex-grow: 2;
+    margin-bottom: 50px;
+
+    &--tel {
+      width: 25%;
+      margin-bottom: 0;
+      position: relative;
+      padding-right: 60px;
+      order: 0;
+      margin-right: 70px;
+    }
+
+    &--mail {
+      margin-bottom: 0;
+      width: 25%;
+      padding-right: 60px;
+      position: relative;
+      order: 1;
+    }
+  }
+
+  .field-ID__label {
+    @include font(14px, 400, 14px);
+    @include padding-rl(20px, 0px);
+    color: $pink;
+    width: auto;
+    text-transform: uppercase;
+    padding-top: 15px;
+    flex-grow: 1;
+
+    &--tel {
+      margin-left: 0;
+      margin-bottom: 30px;
+      width: 49%;
+      order: 3;
+    }
+
+    &--mail {
+      margin-left: 0;
+      margin-bottom: 30px;
+      width: 40%;
+      order: 4;
+    }
+  }
+
+  .field-achive {
+    @include wrapper();
+    padding: 0 58px;
+    box-sizing: border-box;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+    border: 2px solid $lightgrey;
+    margin-bottom: 40px;
+    min-height: auto;
+    order: 4;
+
+    h2 {
+      @include font(14px, 400, 30px);
+      @include padding-rl(30px, 30px);
+      color: $pink;
+      text-transform: uppercase;
+      background-color: $white;
+      margin-top: -15px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      text-align: center;
+    }
+  }
+
+  .field-achive__label {
+    @include font(18px, 400, 30px);
+    color: $darkblue;
+    position: relative;
+    margin-left: 0;
+    width: 25%
+  }
+
+  .field-feedback {
+    @include wrapper();
+    padding: 40px 40px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  .field-btn {
+    @include wrapper();
   }
 }

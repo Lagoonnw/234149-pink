@@ -1,0 +1,60 @@
+.research {
+  display: none;
+  @include wrapper();
+}
+
+@media (min-width: 660px) {
+  .research {
+    @include wrapper-fluid();
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .research__inner {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .research__title {
+    @include font(30p, 700, 36px);
+    color: #000;
+  }
+
+  .research__info {
+    @include font(14px, 400, 20px);
+  }
+
+  .research__link {
+    @include font(14px, 400, 20px);
+    color: $pink;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .research__inner {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .research__title {
+    @include font(30p, 700, 30px);
+    color: #000;
+  }
+
+  .research__info {
+    @include font(14px, 400, 20px);
+  }
+
+  .research__link {
+    @include font(14px, 400, 20px);
+    color: $pink;
+  }
+}

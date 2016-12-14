@@ -2,25 +2,195 @@
 
 .intro {
   background-color: $darkblue;
-}
-
-.intro__inner {
-  @include padding-rl(1.25em, 1.25em);
+  background-image: url('../img/bg-back-mobile@1x.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 .intro__promo {
-  position: relative;
-  background-image: url('../img/bg-back-mobile@1x.jpg');
+  @include wrapper();
+  height: 735px;
+  margin: auto;
+  background-image: url('../img/iphone-hand-mobile@1x.png');
+  background-position: top;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: left 163px;
+
+  &--inner-page {
+    background-image: none;
+    height: 237px;
+  }
 }
 
 .intro__header {
-  @include font(1.5em, 300, 1.5em*1.2);
+  @include font(24px, 300, 24px*1.2);
   color: $white;
+  width: 220px;
   text-align: center;
+  padding-top: 73px;
+  margin-bottom: 320px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .intro-downloads {
   background-color: $darkblue;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: 270px;
 }
+
+.intro-downloads__inner {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.intro-downloads__buttons {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 205px;
+  align-items: flex-end;
+  padding-top: 31px;
+
+}
+
+.intro-downloads__btn {
+  font-size:0;
+}
+
+.intro-downloads__text {
+  color: $white;
+  text-align: center;
+  width: 280px;
+  margin: auto;
+}
+
+
+@media (min-width: 660px) {
+
+  .intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url('../img/bg-back-mobile@1x.jpg');
+    background-repeat: no-repeat;
+  }
+
+  .intro__header {
+    @include font(40px, 300, 40px*1.2);
+    width: 200px;
+    margin-bottom: 25px;
+    margin-left:55px;
+    margin-right: auto;
+    text-align: center;
+
+    &--inner-page {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  .intro__promo {
+    @include wrapper-fluid();
+    @include padding-rl(20px, 20px);
+    box-sizing: border-box;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/iphone-hand-mobile@1x.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+     &--inner-page {
+      background-image: none;
+      height: 237px;
+    }
+  }
+
+  .intro-downloads {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 271px;
+    width: 300px;
+    margin-left:0;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .intro {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url('../img/bg-back-mobile@1x.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  .intro__promo {
+    width: 300px;
+    height: auto;
+    margin-right: 580px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-downloads {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 271px;
+    width: 300px;
+    margin-right: 580px;
+  }
+
+  .intro__promo {
+    @include wrapper();
+    @include padding-rl(20px, 20px);
+    box-sizing: border-box;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/iphone-hand-mobile@1x.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    &--inner-page {
+        background-image: none;
+        height: 395px;
+      }
+  }
+
+   .intro__header {
+    @include font(50px, 300, 50px*1.2);
+    width: 230px;
+    margin-left: 80px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 215px;
+    text-align: center;
+
+    &--inner-page {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+    }
+  }
+}
+
