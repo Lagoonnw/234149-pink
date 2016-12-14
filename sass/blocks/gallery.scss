@@ -184,7 +184,8 @@
 }
 
 .photo-redactor__redactor-bar {
-  @include padding-rl(56px, 56px);
+  @include padding-rl(20px, 20px);
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -205,6 +206,12 @@
 
 .photo-redactor__crop {
   margin-bottom: 115px;
+}
+
+.photo-redactor__buttons {
+  min-width: 280px;
+  padding: 0;
+  margin: auto;
 }
 
 
