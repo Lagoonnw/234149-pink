@@ -354,8 +354,10 @@
     &--panorama {
       background-color: $pink;
       position: relative;
-      width: 100%;
+      width: 1200px;
       height: 506px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 

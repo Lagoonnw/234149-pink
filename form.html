@@ -14,17 +14,11 @@
           <div class='main-menu__header'>
             <div class='main-menu__header-inner'>
               <div class='main-menu__logo'>
-                <picture class="main-menu__logo-mobile">
+                <picture class='main-menu__logo-mobile'>
                   <source media='(min-width: 320px)' srcset='img/logo-pink-white-mobile.svg'>
-                  <img src='img/logo-pink-white-mobile.png' width='74' height='23'>
-                </picture>
-                <picture class="main-menu__logo-tablet">
-                  <source media='(min-width: 660px)' srcset='img/logotype-white-tablet.svg'>
-                  <img src='img/logotype-white-tablet.png' width='147' height='40'>
-                </picture>
-                <picture class="main-menu__logo-desktop">
+                  <source media='(min-width: 660px)' srcset='img/logo-pink-white-tablet.svg'>
                   <source media='(min-width: 960px)' srcset='img/logotype-white-desktop.svg'>
-                  <img src='img/logotype-white-desktop.png' width='147' height='40'>
+                  <img src='img/logo-pink-white-mobile.png' width='74' height='23'>
                 </picture>
               </div>
               <span class='main-menu__toggle main-menu__toggle--closed'>открыть меню</span>
@@ -152,7 +146,11 @@
         <div class='page-footer-socials__inner'>
           <div class='page-footer-socials__applogo'>PINK
             <a href='index.html'>
-              <img src='img/logo-pink-blue-mobile.svg' width='147' height='40'>
+              <picture>
+                <source media='(min-width: 660px)' srcset='img/logo-pink-blue-desktop.svg'>
+                <source media='(min-width: 960px)' srcset='img/logo-pink-blue-desktop.svg'>
+                <img src='img/logo-pink-blue-mobile.svg' width='147' height='40'>
+              </picture>
             </a>
           </div>
           <section class='footer-socials'>

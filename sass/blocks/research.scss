@@ -1,22 +1,49 @@
 .research {
   display: none;
-  @include wrapper();
+  width: 100%;
+  background-color: $lightgrey;
 }
 
 @media (min-width: 660px) {
+
   .research {
-    @include wrapper-fluid();
-    padding: 0 20px;
-    box-sizing: border-box;
     display: block;
   }
 
   .research__inner {
+    @include wrapper-fluid();
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .research__img {
+    width: 238px;
+    height: 276px;
+    margin-right: 60px;
+    position: relative;
+  }
+
+  .research__absolute {
+    @include font(96px, 700, 96px*1.2);
+    color: $pink;
+    text-align: center;
+    position: absolute;
+    top: 57px;
+    left: 21px;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 12px solid $pink;
+  }
+
+  .research__info {
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-right: 0;
-    margin-left: auto;
   }
 
   .research__title {
@@ -24,7 +51,7 @@
     color: #000;
   }
 
-  .research__info {
+  .research__text {
     @include font(14px, 400, 20px);
   }
 
@@ -36,25 +63,60 @@
 
 @media (min-width: 960px) {
 
-  .research__inner {
-    width: 66%;
-    display: flex;
-    flex-direction: column;
-    margin-right: 0;
-    margin-left: auto;
+  .reserch {
+
   }
 
-  .research__title {
-    @include font(30p, 700, 30px);
-    color: #000;
+  .research__inner {
+    @include wrapper();
+    padding: 14px 10px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .research__img {
+    position: relative;
+    width: 317px;
+    height: 355px;
+    margin-right: 70px;
+  }
+
+  .research__absolute {
+    @include font(120px, 700, 120px*1.7);
+    color: $pink;
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    top: 69px;
+    left: 25px;
+    width: 221px;
+    height: 221px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 16px solid $pink;
   }
 
   .research__info {
-    @include font(14px, 400, 20px);
+    width: 65%;
+    margin-top: 66px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .research__title {
+    @include font(30px, 700, 30px);
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  .research__text {
+    @include font(18px, 400, 30px);
   }
 
   .research__link {
-    @include font(14px, 400, 20px);
+    @include font(18px, 400, 30px);
     color: $pink;
   }
 }

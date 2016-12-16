@@ -31,19 +31,6 @@
   padding-top: 25px;
 }
 
-.main-menu__logo-mobile {
-  width: 74px;
-  height: 23px;
-}
-
-.main-menu__logo-tablet {
-  display: none;
-}
-
-.main-menu__logo-desktop {
-  display: none;
-}
-
 .main-menu__toggle {
   width: 50px;
   height: 24px;
@@ -112,20 +99,6 @@
     padding-top: 25px;
   }
 
-  .main-menu__logo-mobile {
-    display: none;
-  }
-
-  .main-menu__logo-tablet {
-    width: 147px;
-    height: 40px;
-    display: block;
-  }
-
-  .main-menu__logo-desktop {
-    display: none;
-  }
-
   .main-menu__toggle {
     background-position: right bottom;
   }
@@ -144,6 +117,8 @@
 
   .main-menu__inner {
     @include wrapper();
+    padding: 0 10px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -152,6 +127,10 @@
 
   .main-menu__header {
     height: 110px;
+  }
+
+  .main-menu__header-inner {
+    width: auto;
   }
 
   .main-menu__toggle {

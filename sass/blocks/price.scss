@@ -159,5 +159,22 @@
     border-collapse: collapse;
     width: 100%;
   }
+}
 
+@media (min-width: 960px) {
+
+  .price {
+    padding-top: 140px;
+  }
+
+  .price-table__title {
+    @include font(18px, 700, 30px);
+    color: $white;
+    margin-top: auto;
+  }
+
+  .price-table__amount {
+    @include font(24px, 300, 30px);
+    color: $white;
+  }
 }

@@ -14,9 +14,12 @@
           <div class='main-menu__header'>
             <div class='main-menu__header-inner'>
               <div class='main-menu__logo'>
-                <img class='main-menu__logo-mobile' src='img/logo-pink-white-mobile.svg' width='74' height='23'>
-                <img class='main-menu__logo-tablet' src='img/logotype-white-tablet.png' width='147' height='40'>
-                <img class='main-menu__logo-desktop' src='img/logotype-white-desktop.svg' width='147' height='40'>
+                <picture class='main-menu__logo-mobile'>
+                  <source media='(min-width: 320px)' srcset='img/logo-pink-white-mobile.svg'>
+                  <source media='(min-width: 660px)' srcset='img/logo-pink-white-tablet.svg' width='147' height='40'>
+                  <source media='(min-width: 960px)' srcset='img/logo-pink-white-desktop.svg' width='147' height='40'>
+                  <img src='img/logo-pink-white-mobile.svg' width='74' height='23'>
+                </picture>
               </div>
               <span class='main-menu__toggle main-menu__toggle--closed'>открыть меню</span>
             </div>
@@ -43,7 +46,7 @@
       <h1 class='page-content__h1 page-content__h1--visually-hidden'>Приложение PINK</h1>
       <section class='intro'>
         <div class='intro__promo'>
-          <h2 class='intro__header'>Взгляни на жизнь иначе!</h2>
+          <h2 class='intro__header'>Взгляните на жизнь иначе!</h2>
 
         <!-- ссылки скачать приложение -->
           <section class='intro-downloads'>
@@ -91,9 +94,19 @@
       <!-- Исследования-->
       <section class='research'>
         <div class='research__inner'>
-          <h2 class='research__title'>Эффект на 24 часа!</h2>
-          <p class="research__info">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a class='research__link' href='#'>Узнать больше об исследовании</a>
+          <div class='research__img'>
+            <div class='research__absolute'>24</div>
+            <picture>
+              <source media='(min-width: 660px)' srcset='img/icon-timer.svg'>
+              <source media='(min-width: 960px)' srcset='img/icon-timer.svg'>
+              <img src='img/icon-timer.svg' width='100%' height='auto'>
+            </picture>
+          </div>
+          <div class='research__info'>
+            <h2 class='research__title'>Эффект на 24 часа!</h2>
+            <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class='research__link' href='#'>Узнать больше об исследовании</a>
+          </div>
         </div>
       </section>
       <!-- Отзывы -->
@@ -243,7 +256,8 @@
         <div class='page-footer-socials__inner'>
           <div class='page-footer-socials__applogo'>
             <picture>
-              <img class='main-menu__logo-tablet' src='img/logo-pink-blue-mobile.svg' width='147' height='40'>
+              <source src=''>
+              <img class='main-menu__logo-tablet' src='img/logo-pink-blue-mobile.svg' width='147' height='41'>
             </picture>
           </div>
           <section class='footer-socials'>
