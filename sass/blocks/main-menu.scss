@@ -79,6 +79,11 @@
   font-size: 0;
 }
 
+.main-menu__link-desktop,
+.main-menu__link-tablet {
+  display: none;
+}
+
 @media (min-width: 660px) {
 
   .main-menu__header {
@@ -105,6 +110,15 @@
 
   .main-menu__toggle {
     padding-top: 43px;
+  }
+
+  .main-menu__link-mobile {
+    display: block;
+  }
+
+  .main-menu__link-mobile,
+  .main-menu__link-desktop {
+  display: none;
   }
 }
 
@@ -163,15 +177,19 @@
     text-transform: capitalize;
   }
 
-  .main-menu__logo-mobile {
+  .main-menu__link-mobile,
+  .main-menu__link-tablet {
     display: none;
   }
 
-  .main-menu__logo-tablet {
-    display: none;
-  }
-
-  .main-menu__logo-desktop {
+  .main-menu__link-desktop {
     display: block;
+  }
+
+  .main-menu__logo-letters:hover {
+
+    .main-menu__logo-letter {
+      fill: #D22856;
+    }
   }
 }

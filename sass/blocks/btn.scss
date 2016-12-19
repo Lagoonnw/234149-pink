@@ -102,18 +102,23 @@
 
 @media (min-width: 960px) {
   .btn {
-    width: 179px;
+    width: 182px;
+    margin-left: 0;
+    border: 3px solid $pink;
+    padding: 16px 0;
 
     &--index {
       width: 292px;
     }
 
     &--cancel {
-      border: 4px solid #dddfe0;
+      border: 3px solid #dddfe0;
       color: #dddfe0;
       background-color: transparent;
-      width: 179px;
+      width: 182px;
       margin-top: 0;
+      margin-right: 0;
+      padding: 16px 0;
     }
 
     &--form-btn {
