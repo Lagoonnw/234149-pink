@@ -146,13 +146,17 @@
   display: inline-block;
   width: 27px;
   height: 34px;
-  background-image: url('../img/logo-htmlacademy.svg');
-  background-repeat: no-repeat;
+}
+
+.page-footer-socials__applogo-desktop {
+  display: none;
 }
 
 @media (min-height: 660px) {
 
   .page-footer {
+
+    padding-top: 0;
 
     &--index .page-footer-socials {
       display: block;
@@ -161,6 +165,8 @@
 
   .page-footer-contacts__inner {
     @include wrapper();
+    padding: 0 10px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -209,7 +215,7 @@
   .page-footer {
     @include font(14px, 400, 24px);
     color: $darkblue;
-    padding-top: 40px;
+    padding-top: 0;
   }
 
   .page-footer-contacts__title {
@@ -222,7 +228,7 @@
 
   .page-footer-socials__inner {
     @include wrapper();
-    @include padding-rl(20px, 20px);
+    @include padding-rl(10px, 10px);
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -243,4 +249,34 @@
     text-align: center;
   }
 
+  .page-footer-socials__applogo {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .page-footer-socials__copyrights {
+    @include font(18px, 400, 18px);
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .page-footer-socials__applogo-desktop {
+    display: inline;
+  }
+
+  .page-footer-socials__applogo-mobile {
+    display: none;
+  }
+
+  .page-footer-socials__copyrights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  p {
+    margin-right: 15px;
+  }
 }

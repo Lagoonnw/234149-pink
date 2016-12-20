@@ -187,8 +187,8 @@
 
    .intro__header {
     @include font(50px, 300, 50px*1.2);
-    width: 230px;
-    margin-left: 33px;
+    width: 250px;
+    margin-left: 25px;
     margin-right: auto;
     margin-bottom: 50px;
     margin-top: 145px;
@@ -196,7 +196,7 @@
 
     &--inner-page {
       text-align: center;
-      width: 50%;
+      width: 100%;
       margin: auto;
     }
   }
@@ -204,6 +204,10 @@
   .intro-downloads__text {
     @include font(18px, 300, 24px);
     width: 300px;
+  }
+
+  .intro-downloads__buttons {
+    padding-top: 0;
   }
 }
 

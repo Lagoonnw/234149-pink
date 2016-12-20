@@ -120,7 +120,7 @@
 
   .price-tables {
     @include wrapper();
-    @include padding-rl(20px, 20px);
+    @include padding-rl(10px, 10px);
     box-sizing: border-box;
   }
 
@@ -165,6 +165,13 @@
 
   .price {
     padding-top: 140px;
+    padding-bottom: 95px;
+    width: 100%;
+  }
+
+  .price-tables__wrapper {
+    width: 100%;
+    padding: 0;
   }
 
   .price-table__title {
@@ -176,5 +183,75 @@
   .price-table__amount {
     @include font(24px, 300, 30px);
     color: $white;
+  }
+
+  .price-table__check {
+
+    &--yes {
+      display: block;
+      width: 32px;
+      height: 22px;
+      margin: auto;
+      background-size: 32px 22px;
+    }
+
+    &--no {
+      display: block;
+      width: 27px;
+      height: 26px;
+      margin: auto;
+      background-size: 27px 26px
+    }
+  }
+
+  .price-table {
+    tr {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    td,
+    th {
+      width: 229px;
+    }
+
+    th {
+      border-bottom-color: none;
+    }
+
+    td {
+      display: flex;
+      height: 54px;
+    }
+  }
+
+  .price-table__item {
+
+    p {
+      @include font(18px, 400, 30px);
+      text-transform: capitalize;
+      margin-left: 0;
+      margin-right: auto;
+      padding-left: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  .price-table__header {
+    flex-direction: column;
+    height: 97px;
+  }
+
+  .price-table__title {
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .price-table__amount {
+    margin: auto;
   }
 }
