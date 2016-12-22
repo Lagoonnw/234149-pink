@@ -10,6 +10,7 @@
   @include font(14px, 400, 30px);
   @include padding-rl(20px, 20px);
   text-align: center;
+  margin-top: 0;
 
   span {
     display: none;
@@ -17,7 +18,7 @@
 }
 
 .field-ID {
-  @include padding-tb(30px, 40px);
+  @include padding-tb(18px, 20px);
   background-color: $white;
   display: flex;
   flex-direction: column;
@@ -28,6 +29,10 @@
   h2 {
     display: none;
   }
+
+  &--mobile {
+    margin-bottom: 12px;
+  }
 }
 
 .field-ID__label {
@@ -36,25 +41,30 @@
   width: 100%;
   text-transform: uppercase;
   padding-left: 23px;
+  margin-bottom: 5px;
 }
 
 .field-ID__input {
+  @include font(18px, 400, 18px);
+  letter-spacing: 0.5px;
   box-sizing: border-box;
   border: 2px solid $lightgrey;
-  height: 59px;
+  height: 61px;
   padding-left: 20px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .field-apps {
   @include padding-rl(20px, 20px);
-  @include padding-tb(30px, 40px);
+  @include padding-tb(30px, 0);
+  box-sizing: border-box;
   background-color: $lightgrey;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  min-height: 250px;
+  justify-content: flex-start;
+  min-height: 340px;
 
   h2 {
     @include font(14px, 400, 18px);
@@ -62,6 +72,8 @@
     color: $pink;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 37px;
   }
 }
 
@@ -69,17 +81,20 @@
   @include font(18px, 400, 30px);
   color: $darkblue;
   position: relative;
-  padding-left: 56px;
+  padding-left: 70px;
+  margin-bottom: 45px;
 }
 
 .field-achive {
   @include padding-rl(20px, 20px);
   @include padding-tb(30px, 40px);
+  box-sizing: border-box;
   background-color: $lightgrey;
   display: flex;
   flex-direction: column;
-  min-height: 450px;
-  justify-content: space-between;
+  min-height: 605px;
+  justify-content: flex-start;
+  margin-bottom: 15px;
 
   h2 {
     @include font(14px, 400, 18px);
@@ -87,14 +102,30 @@
     color: $pink;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 40px;
   }
+}
+
+.field-achive__wrapper {
+  height: 100%;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.field-achive__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
 }
 
 .field-achive__label {
   @include font(18px, 400, 30px);
   color: $darkblue;
   position: relative;
-  padding-left: 57px;
+  padding-left: 70px;
 }
 
 .field-feedback {
@@ -103,6 +134,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  box-sizing: border-box;
 
   h2 {
     @include font(14px, 400, 18px);
@@ -114,11 +146,11 @@
 
 .field-achive__checkbox + .field-achive__checkbox-indicator {
   position: absolute;
-  top: 0;
+  top: -5px;
   left: 0;
   display: block;
-  width: 23px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   background-color: $white;
   border: 2px solid #e5e5e5;
   cursor: pointer;
@@ -127,10 +159,10 @@
 .field-achive__checkbox:checked + .field-achive__checkbox-indicator::before {
   content: '';
   position: absolute;
-  top: 11px;
-  left: 5px;
+  top: 17px;
+  left: 10px;
   width: 2px;
-  height: 8px;
+  height: 10px;
   background-color: $pink;
   transform: rotate(-45deg);
 }
@@ -138,10 +170,10 @@
 .field-achive__checkbox:checked + .field-achive__checkbox-indicator::after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 13px;
+  top: 8px;
+  left: 20px;
   width: 2px;
-  height: 16px;
+  height: 20px;
   background-color: $pink;
   transform: rotate(45deg);
 }
@@ -178,23 +210,12 @@
 
 .field-feedback__text {
   @include font(18px, 400, 30px);
-  padding: 20px;
+  letter-spacing: 0.6px;
+  padding: 15px 20px;
   color: $darkblue;
   border: 2px solid #e5e5e5;
-  min-height: 196px;
-  padding: 0;
-  width: 100%;
+  min-height: 180px;
   box-sizing: border-box;
-}
-
-.page-form__footnote {
-  text-align: center;
-
-  small {
-    @include font(14px, 400, 30px);
-    display: none;
-    color: $darkblue;
-  }
 }
 
 .field-btn {
@@ -206,10 +227,18 @@
 .page-form__footnote {
   @include font(14px, 400, 30px);
   margin: auto;
+  margin-top: 35px;
+  margin-bottom: 0;
   text-transform: uppercase;
 
   span {
     color: $pink;
+  }
+
+  small {
+    @include font(14px, 400, 30px);
+    display: none;
+    color: $darkblue;
   }
 }
 
@@ -224,8 +253,9 @@
 
   .page-form__title {
     @include font(18px, 400, 30px);
-    @include padding-rl(65px, 65px);
-    @include padding-tb(70px, 40px);
+    @include padding-rl(70px, 70px);
+    @include padding-tb(90px, 40px);
+    box-sizing: border-box;
     text-align: center;
     order: 0;
 
@@ -235,7 +265,7 @@
   }
 
   .field-ID {
-    @include padding-tb(30px, 40px);
+    @include padding-tb(15px, 20px);
     @include padding-rl(20px, 20px);
     min-width: 620px;
     background-color: $white;
@@ -245,11 +275,12 @@
     order: 1;
 
     &--tablet {
-      @include padding-tb(0, 40px);
-      min-width: 576px;
+      min-width: 620px;
+      padding: 48px 55px 0 55px;
+      box-sizing: border-box;
       border: 2px solid $lightgrey;
       order: 3;
-      margin-bottom: 40px;
+      margin-bottom: 65px;
 
       h2 {
         @include font(14px, 400, 18px);
@@ -257,12 +288,18 @@
         color: $pink;
         text-transform: uppercase;
         background-color: $white;
-        margin-top: -10px;
+        margin-top: -55px;
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
       }
     }
+  }
+
+  .field-ID__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .field-ID__label {
@@ -271,19 +308,21 @@
     color: $pink;
     width: auto;
     text-transform: uppercase;
-    padding-top: 15px;
-    flex-grow: 1;
+    padding-top: 25px;
+    flex-grow: 0;
 
     &--tel {
-      margin-left: 20px;
-      margin-bottom: 30px;
+      margin-left: 22px;
+      margin-bottom: 40px;
+      padding-top: 20px;
       width: 100%;
       order: 1;
     }
 
     &--mail {
-      margin-left: 20px;
+      margin-left: 22px;
       margin-bottom: 30px;
+      padding-top: 20px;
       width: 100%;
       order: 3;
     }
@@ -298,36 +337,39 @@
     width: 80%;
     box-sizing: border-box;
     flex-grow: 2;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 
     &--tel {
       margin-bottom: 0;
       position: relative;
       padding-right: 60px;
       order: 0;
+      width: 100%;
+      height: 60px;
     }
 
     &--mail {
       margin-bottom: 0;
-      width: 415px;
+      width: 100%;
       padding-right: 60px;
       position: relative;
       order: 2;
+      height: 60px;
     }
   }
 
   .field-achive {
     @include padding-rl(20px, 20px);
-    @include padding-tb(0, 0);
+    @include padding-tb(0, 55px);
     background-color: $white;
     display: flex;
     flex-direction: column;
     min-height: 450px;
-    width: 576px;
+    width: 620px;
     justify-content: space-between;
     border: 2px solid $lightgrey;
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 65px;
     order: 4;
 
     h2 {
@@ -340,6 +382,7 @@
       display: inline-flex;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 50px;
     }
   }
 
@@ -347,23 +390,43 @@
     @include font(18px, 400, 30px);
     color: $darkblue;
     position: relative;
-    margin-left: 100px;
+    margin-left: 37px;
+    padding-left: 60px;
+  }
+
+  .field-achive__wrapper {
+    height: 100%;
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .field-achive__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 110px;
   }
 
   .field-apps {
     @include padding-rl(20px, 20px);
-    @include padding-tb(0, 40px);
+    @include padding-tb(0, 20px);
+    min-width: 620px;
+    box-sizing: border-box;
     background-color: $white;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
     min-height: 250px;
-    width: 576px;
     border: 2px solid $lightgrey;
     margin: auto;
     margin-bottom: 65px;
     order: 2;
+
+    &--tablet {
+      justify-content: flex-start;
+    }
 
     h2 {
       @include font(14px, 400, 18px);
@@ -382,20 +445,28 @@
     @include font(18px, 400, 30px);
     color: $darkblue;
     position: relative;
-    margin-left: 100px;
+    margin-left: 37px;
+    margin-top: 10px;
+    padding-left: 60px;
+    margin-bottom: 35px;
+  }
+
+  .field-apps__radio + .field-apps__radio-identificator {
+    top: -5px;
   }
 
   .field-feedback {
-    @include padding-rl(20px, 20px);
-    @include padding-tb(0, 40px);
+    @include padding-rl(55px, 55px);
+    @include padding-tb(55px, 30px);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     order: 5;
     border: 2px solid $lightgrey;
-    width: 576px;
+    width: 620px;
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 
     h2 {
       @include font(14px, 400, 18px);
@@ -403,7 +474,7 @@
       color: $pink;
       text-transform: uppercase;
       background-color: $white;
-      margin-top: -10px;
+      margin-top: -40px;
       display: inline-flex;
       margin-left: auto;
       margin-right: auto;
@@ -412,20 +483,27 @@
 
   .field-feedback__text {
     @include font(18px, 400, 30px);
-    padding: 20px;
+    padding: 15px 20px;
     color: $darkblue;
     border: 2px solid #e5e5e5;
-    min-height: 196px;
-    padding: 0;
-    width: 100%;
+    min-width: 100%;
+    min-height: 150px;
     box-sizing: border-box;
   }
 
   .field-btn {
-    @include wrapper-fluid();
+    @include wrapper();
+    padding: 0 20px;
+    box-sizing: border-box;
     order: 6;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .page-form__footnote {
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -441,17 +519,19 @@
   }
 
   .page-form__title {
-    padding: 73px 85px 30px 85px;
+    padding: 90px 85px 55px 85px;
   }
 
   .field-apps {
     @include padding-rl(0, 0);
-    padding-bottom: 65px;
-    width: 45%;
-    margin-right: 10px;
+    padding-bottom: 30px;
+    min-width: 435px;
     min-height: 235px;
     justify-content: space-between;
     margin-bottom: 55px;
+    margin: auto;
+    margin-right: 0;
+    margin-top: 6px;
   }
 
   .field-apps__label {
@@ -463,7 +543,7 @@
   }
 
   .field-ID {
-    @include padding-tb(37px, 0);
+    @include padding-tb(0, 0);
     @include padding-rl(0, 0);
     box-sizing: border-box;
     min-width: 45%;
@@ -472,11 +552,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     order: 1;
+    margin-top: 13px;
     margin-left: 0;
 
     &--tablet {
       flex-direction: column;
-      padding: 0 58px;
+      padding: 45px 58px 0;
       min-width: 940px;
       border: 2px solid $lightgrey;
       order: 3;
@@ -545,7 +626,7 @@
     color: $pink;
     width: auto;
     text-transform: uppercase;
-    padding-top: 15px;
+    padding-left: 0;
     padding-top: 20px;
     flex-grow: 0;
     margin-top: auto;
@@ -573,11 +654,11 @@
 
   .field-achive {
     @include wrapper();
-    padding: 0 50px 30px 60px;
+    padding: 0 50px 60px 60px;
     box-sizing: border-box;
     background-color: $white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     height: auto;
     justify-content: space-between;
@@ -592,7 +673,7 @@
       color: $pink;
       text-transform: uppercase;
       background-color: $white;
-      margin-top: -16px;
+      margin-top: -15px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 41px;
@@ -616,6 +697,9 @@
   }
 
   .field-achive__wrapper {
+    min-width: 100%;
+    min-height: 100px;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -627,6 +711,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 25%;
+    min-height: 100px;
+
 
     &:nth-child(2) {
       padding-left: 5px;
@@ -642,6 +728,8 @@
 
   .field-btn {
     @include wrapper();
+    padding: 0;
+    margin-bottom: 0;
   }
 
   .field-achive__checkbox + .field-achive__checkbox-indicator {
@@ -680,7 +768,6 @@
     padding: 15px 20px;
     color: $darkblue;
     border: 2px solid #e5e5e5;
-    min-height: 130px;
     width: 100%;
     box-sizing: border-box;
     letter-spacing: 0.5px;

@@ -2,13 +2,29 @@
 
 .price {
   background-color: $lightgrey;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 34px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-image: url('../img/bg-triangle-white.svg');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: 0 0;
+  }
 }
 
 .price-tables__wrapper {
   overflow: hidden;
   width: 100%;
-  padding: 0 20px;
+  padding: 85px 20px 98px 20px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .price-table__header {
@@ -32,12 +48,35 @@
 
   td {
     background-color: $white;
-    border: 2px solid $lightgrey;
+    border: 2px solid #e5e5e5;
+    padding-left: 22px;
+    height: 56px;
+  }
+
+  th {
+    border-bottom: none;
   }
 }
 
 .price-table__header {
   border: 2px solid $lightgrey;
+
+  &--flag-hit {
+    position: relative;
+  }
+
+  &--flag-hit::before {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg-hit-tablet.svg');
+    background-size: 74px 73px;
+    background-repeat: no-repeat;
+  }
 }
 
 .price-table__inner {
@@ -48,20 +87,33 @@
 .price-table__title {
   @include font(18px, 700, 30px);
   color: $white;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .price-table__amount {
   @include font(24px, 300, 30px);
   color: $white;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .price-table__item {
   @include font(14px, 400, 30px);
   padding: 10px, 20px;
   text-transform: uppercase;
+  position: relative;
+
+  span {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: 20px;
+  }
 }
 
-/*.price__control-btn {
+.price__control-btn {
   width: 6px;
   height: 6px;
   background-color: #b5b9be;
@@ -78,7 +130,7 @@
   border: 2px solid $darkblue;
 }
 
-.price__controls {
+/*.price__controls {
   position: absolute;
   z-index: 10;
   bottom: 50px;
@@ -100,6 +152,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
+    margin-top: -13px;
   }
 
   &--yes {
@@ -109,6 +162,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
+    margin-top: -11px;
   }
 }
 
@@ -116,16 +170,66 @@
   opacity: 0;
 }
 
+
 @media (min-width: 660px) {
+
+  .price {
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 55px;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: -5px;
+      background-image: url('../img/bg-triangle-white.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0 0;
+    }
+  }
 
   .price-tables {
     @include wrapper();
-    @include padding-rl(10px, 10px);
-    box-sizing: border-box;
+    padding: 0 0;
+    border-collapse: collapse;
   }
 
   .price-tables__wrapper {
+    overflow: hidden;
     width: 100%;
+    padding: 85px 20px 65px 20px;
+    box-sizing: border-box;
+    margin-bottom: 41px;
+  }
+
+  .price-table {
+    width: 100%;
+
+    th,
+    td {
+      width: 25%;
+      display: table-cell;
+      padding: 0;
+    }
+
+    td {
+      height: 46px;
+      padding-left: 15px;
+    }
+  }
+
+  .price-table__title {
+    @include font(16px, 700, 30px);
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  .price-table__amount {
+    @include font(18px, 300, 30px);
+    margin-top: -5px;
+    margin-bottom: 8px;
   }
 
   .price-table__inner {
@@ -135,7 +239,26 @@
   .price-table__item {
 
     &--mobile {
+      @include font(14px, 400, 14px);
+      text-transform: capitalize;
       display: block;
+    }
+
+    &--table {
+      font-size: 0;
+    }
+  }
+
+   .price-table__check {
+
+    &--no {
+      left: 50%;
+      margin-left: -13px;
+    }
+
+    &--yes {
+      left: 50%;
+      margin-left: -15px;
     }
   }
 
@@ -148,110 +271,72 @@
     }
   }
 
-  .price-table__item {
+  .price-table__header {
 
-    &--table {
-      font-size: 0;
+    &--flag-hit::before {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 61px;
+      height: 61px;
+      background-image: url('../img/bg-hit-tablet.svg');
+      background-size: 61px 61px;
+      background-repeat: no-repeat;
     }
-  }
-
-  .price-table {
-    border-collapse: collapse;
-    width: 100%;
   }
 }
 
 @media (min-width: 960px) {
 
   .price {
-    padding-top: 140px;
-    padding-bottom: 95px;
-    width: 100%;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: -5px;
+      background-image: url('../img/bg-triangle-white.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0 0;
+    }
+  }
+
+  .price-tables {
+    @include wrapper();
+    padding: 0 0;
+    border-collapse: collapse;
   }
 
   .price-tables__wrapper {
+    overflow: hidden;
     width: 100%;
-    padding: 0;
+    padding: 145px 10px 98px 10px;
+    box-sizing: border-box;
   }
 
   .price-table__title {
     @include font(18px, 700, 30px);
-    color: $white;
-    margin-top: auto;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   .price-table__amount {
     @include font(24px, 300, 30px);
-    color: $white;
-  }
-
-  .price-table__check {
-
-    &--yes {
-      display: block;
-      width: 32px;
-      height: 22px;
-      margin: auto;
-      background-size: 32px 22px;
-    }
-
-    &--no {
-      display: block;
-      width: 27px;
-      height: 26px;
-      margin: auto;
-      background-size: 27px 26px
-    }
-  }
-
-  .price-table {
-    tr {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    td,
-    th {
-      width: 229px;
-    }
-
-    th {
-      border-bottom-color: none;
-    }
-
-    td {
-      display: flex;
-      height: 54px;
-    }
+    margin-top: 0;
+    margin-bottom: 25px;
   }
 
   .price-table__item {
 
     p {
-      @include font(18px, 400, 30px);
-      text-transform: capitalize;
-      margin-left: 0;
-      margin-right: auto;
-      padding-left: 20px;
-      margin-top: auto;
-      margin-bottom: auto;
+      @include font(18px, 400, 22px);
+      padding-left: 6px;
     }
-  }
-
-  .price-table__header {
-    flex-direction: column;
-    height: 97px;
-  }
-
-  .price-table__title {
-    margin: auto;
-    margin-top: 20px;
-  }
-
-  .price-table__amount {
-    margin: auto;
   }
 }
