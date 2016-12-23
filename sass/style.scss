@@ -1,8 +1,8 @@
-@import 'normalize.scss';
+@import 'normalize.css';
 @import 'global/fonts.scss';
-@import 'variables.scss';
-@import 'mixins.scss';
-@import 'scaffolding.scss';
+@import 'global/variables.scss';
+@import 'global/mixins.scss';
+@import 'global/scaffolding.scss';
 
 @import 'blocks/page-header.scss';
 @import 'blocks/main-menu.scss';

@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import 'global/variables.scss';
 
 .page-footer {
   @include font(14px, 400, 24px);
@@ -115,6 +115,7 @@
   margin: auto;
   flex-direction: row;
   min-width: 178px;
+  width: 178px;
   justify-content: space-between;
 }
 
