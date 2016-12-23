@@ -14,7 +14,7 @@
   margin: 0 auto;
   width: 100%;
   @include font(18px, 700, 18px);
-  @include padding-tb(16px, 16px);
+  @include padding-tb(17px, 17px);
 
   &:hover {
     background-color: $pink;
@@ -26,12 +26,13 @@
   }
 
   &--index {
-    border: 4px solid $white;
+    @include font(21px, 700, 21px);
+    padding: 15px 0 15px;
+    border: 3px solid $white;
     color: $white;
     background-color: none;
-    width: $mobile-inner;
-
-    @include padding-tb(0.875em, 1.063em);
+    width: 100%;
+    margin-bottom: 14px;
   }
 
   &--index:hover {
@@ -45,11 +46,13 @@
 
   &--form-btn {
     border: 4px solid #2aab6d;
-    color: #2aab6d;
+    color: $white;
     border-radius: 5px;
     text-transform: uppercase;
-    @include font(1.125em, 700, 1.875em);
-    @include padding-tb(0.750em, 0.750em);
+    @include font(18px, 700, 30px);
+    @include padding-tb(12px, 12px);
+    width: 280px;
+    background-color: #2aab6d;
   }
 
   &--form-btn:hover {
@@ -66,7 +69,8 @@
     color: #dddfe0;
     background-color: transparent;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
+    padding: 15px 0;
   }
 
   &--cancel:hover {
@@ -79,6 +83,10 @@
     background-color: #b5b9be;
     color: $white;
   }
+
+  &--post {
+    padding: 15px 0;
+  }
 }
 
 @media (min-width: 660px) {
@@ -89,34 +97,73 @@
 
     &--form-btn {
       border: 4px solid #2aab6d;
-      color: #2aab6d;
+      color: $white;
       border-radius: 5px;
       text-transform: uppercase;
-      @include font(1.125em, 700, 1.875em);
-      @include padding-tb(0.750em, 0.750em);
+      @include font(18px, 700, 18px);
+      @include padding-tb(14px, 14px);
       width: 300px;
-    }
-  }
-}
-
-@media (min-width: 960px) {
-  .btn {
-    width: 179px;
-
-    &--index {
-      width: 300px;
+      margin-left: 0;
     }
 
     &--cancel {
       border: 4px solid #dddfe0;
       color: #dddfe0;
       background-color: transparent;
-      width: 179px;
+      width: 260px;
+      margin-top: 22px;
+      margin-left: 0;
+      padding: 15px 0;
+    }
+
+    &--post {
+      width: 260px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .btn {
+    width: 182px;
+    margin-left: 0;
+    border: 3px solid $pink;
+    padding: 16px 0;
+
+    &--index {
+      width: 292px;
+      border-color: $white;
+    }
+
+    &--cancel {
+      border: 3px solid #dddfe0;
+      color: #dddfe0;
+      background-color: transparent;
+      width: 182px;
       margin-top: 0;
+      margin-right: 0;
+      padding: 16px 0;
+    }
+
+    &--cancel:hover {
+      border: 3px solid #b5b9be;
+      color: #b5b9be;
+      background-color: transparent;
     }
 
     &--form-btn {
+      border: 4px solid #2aab6d;
+      color: $white;
+      border-radius: 5px;
+      text-transform: uppercase;
+      @include font(18px, 700, 30px);
+      @include padding-tb(12px, 12px);
       width: 300px;
+    }
+
+    &--form-btn:hover {
+      border: 4px solid #1c9b5e;
+      background-color: #1c9b5e;
     }
   }
 }

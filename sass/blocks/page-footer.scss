@@ -3,7 +3,7 @@
 .page-footer {
   @include font(14px, 400, 24px);
   color: $darkblue;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .page-footer-contacts__inner {
@@ -19,11 +19,14 @@
   @include padding-rl(20px, 20px);
   color: $darkblue;
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 35px;
 }
 
 .page-footer-contacts__contact-item {
   width: 280px;
   margin: auto;
+  margin-bottom: 10px;
   padding-bottom: 20px;
 
   & b {
@@ -43,6 +46,14 @@
   background-image: url('../img/bg-map-mobile@1x.png');
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 144dpi) {
+    background-image: url('../img/bg-map-mobile@2x.png');
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url('../img/bg-map-mobile@2x.png');
+  }
 }
 
 .page-footer__yandex-map {
@@ -89,11 +100,11 @@
 }
 
 .page-footer-socials__inner {
-  @include wrapper();
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: space-between;
+  min-height: 245px;
 }
 
 .page-footer-socials__applogo {
@@ -146,13 +157,27 @@
   display: inline-block;
   width: 27px;
   height: 34px;
-  background-image: url('../img/logo-htmlacademy.svg');
-  background-repeat: no-repeat;
 }
+
+.page-footer-socials__applogo-desktop {
+  display: none;
+}
+
+.page-footer-socials__copyrights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      margin-right: 15px;
+    }
+  }
 
 @media (min-height: 660px) {
 
   .page-footer {
+
+    padding-top: 0;
 
     &--index .page-footer-socials {
       display: block;
@@ -160,23 +185,39 @@
   }
 
   .page-footer-contacts__inner {
-    @include wrapper();
+    min-width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: flex-start;
+    position: relative;
 
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      bottom: -71px;
+      left: -5px;
+      width: 100%;
+      height: 72px;
+      background-image: url('../img/bg-triangle-white-footer.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
   }
 
   .page-footer-socials__inner {
-    @include wrapper();
-    @include padding-rl(20px, 20px);
+    width: 100%;
+    padding: 0 40px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     margin: auto;
     justify-content: space-between;
-    height: 127px;
+    min-height: 127px;
   }
 
   .page-footer__yandex-map {
@@ -201,7 +242,39 @@
 
   .page-footer-socials__applogo {
     margin: auto 0;
-    background-color: $lightgrey;
+  }
+
+  .page-footer-contacts__contact-item {
+    margin-top: 10px;
+
+    b {
+      margin-bottom: 7px;
+    }
+  }
+
+  .page-footer-socials__copyrights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      margin-right: 15px;
+    }
+  }
+
+  .page-footer__map {
+    background-color: #eae6dd;
+    background-image: url('../img/bg-map-tablet@1x.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 144dpi) {
+      background-image: url('../img/bg-map-tablet@2x.jpg');
+    }
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url('../img/bg-map-tablet@2x.jpg');
+    }
   }
 }
 
@@ -210,31 +283,83 @@
   .page-footer {
     @include font(14px, 400, 24px);
     color: $darkblue;
-    padding-top: 40px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .page-footer-contacts__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+
+    &::after {
+      display: none;
+    }
   }
 
   .page-footer-contacts__title {
+    @include wrapper();
     @include font(40px, 300, 40px*1.2);
-    @include padding-rl(20px, 20px);
+    @include padding-rl(10px, 10px);
+    box-sizing: border-box;
     color: $darkblue;
     text-align: center;
     margin: auto;
+    margin-bottom: 30px;
+    order: 0;
+  }
+
+  .page-footer-contacts__contact-item {
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      order: 3;
+    }
   }
 
   .page-footer-socials__inner {
     @include wrapper();
-    @include padding-rl(20px, 20px);
+    padding: 0 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: auto;
     justify-content: space-between;
     height: 197px;
   }
 
+  .page-footer__map {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background-image: url('../img/bg-triangle-white-footer.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
   .page-footer__yandex-map {
     width: 100%;
-    height: 503px;
+    height: 550px;
   }
 
   .page-footer-contacts__title {
@@ -244,4 +369,56 @@
     text-align: center;
   }
 
+  .page-footer-socials__applogo {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .page-footer-socials__copyrights {
+    @include font(18px, 400, 18px);
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .page-footer-socials__applogo-desktop {
+    display: inline;
+  }
+
+  .page-footer-socials__applogo-mobile {
+    display: none;
+  }
+
+  .page-footer-socials__copyrights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      margin-right: 15px;
+    }
+  }
+
+  .page-footer {
+
+    &--index .page-footer-socials {
+      display: flex;
+    }
+  }
+
+  .page-footer__map {
+    background-color: #eae6dd;
+    background-image: url('../img/bg-map-desktop@1x.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 144dpi) {
+      background-image: url('../img/bg-map-desktop@2x.jpg');
+    }
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url('../img/bg-map-desktop@2x.jpg');
+    }
+  }
 }
