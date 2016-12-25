@@ -56,13 +56,18 @@
   margin-right: 0;
 
   &--closed {
-    width: 50px;
+    width: 24px;
     height: 24px;
+
+    .main-menu__toggle-burger {
+      display: none;
+    }
   }
 
-  &--closed .main-menu__toggle-cross {
-    display: none;
+  .main-menu__toggle-cross {
+    display: inline-block;
   }
+
 }
 
 .main-menu__list {
