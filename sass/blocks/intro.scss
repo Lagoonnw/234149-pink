@@ -113,6 +113,7 @@
     background-image: url('../img/bg-back-tablet@1x.jpg');
     background-repeat: no-repeat;
     background-size: 1200px auto;
+    background-position: center bottom;
 
     @media (min-resolution: 144dpi),
            (min-resolution: 1.5dppx) {
@@ -129,7 +130,7 @@
     @include font(40px, 300, 40px*1.2);
     width: 200px;
     margin-bottom: 25px;
-    margin-left: 105px;
+    margin-left: 70px;
     margin-right: auto;
     padding-top: 92px;
     padding-bottom: 0;
@@ -154,7 +155,7 @@
     flex-direction: column;
     background-image: url('../img/iphone-hand-tablet@1x.png');
     background-repeat: no-repeat;
-    background-position: 35px bottom;
+    background-position: 0 bottom;
     background-size: 700px auto;
 
     @media (min-resolution: 144dpi),
@@ -175,7 +176,7 @@
     flex-direction: column;
     margin: auto;
     width: 300px;
-    margin-left: 55px;
+    margin-left: 20px;
     margin-right: auto;
     margin-bottom: 100px;
   }
@@ -279,7 +280,6 @@
       margin: auto;
       margin-top: 175px;
       box-sizing: border-box;
-      letter-spacing: 0.6px;
     }
   }
 
