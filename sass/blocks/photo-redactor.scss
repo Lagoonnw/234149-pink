@@ -256,7 +256,7 @@
     left: 50px;
 
     &--nth1 {
-      top: -20px;
+      top: -17px;
       left: 157px;
     }
 
@@ -304,6 +304,8 @@
     width: 410px;
     height: 100%;
     margin-top: 0;
+    margin-right: 0;
+    margin-left: 45px;
     margin-bottom: 0;
   }
 
@@ -316,8 +318,10 @@
   }
 
   .photo-redactor__photo {
-    width: auto;
+    width: 300px;
     padding-top: 0;
+    margin-left: 0;
+    margin-right: 45px;
   }
 
   .photo-redactor__crop,

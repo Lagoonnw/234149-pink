@@ -15,20 +15,6 @@
   background-color: $lightgrey;
   position: relative;
 
-  &::before {
-    content: '';
-    width: 100%;
-    height: 34px;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    background-image: url('../img/bg-triangle-white.svg');
-    background-repeat: no-repeat;
-    background-size: 120%;
-    background-position: 0 0;
-  }
-
   &::after {
     content: '';
     width: 100%;
@@ -66,9 +52,11 @@
   justify-content: space-around;
   background-color: $lightgrey;
   width: 100%;
-  background-image: url('../img/iphone-screen-mobile@1x.png');
+  background-image: url('../img/iphone-screen-mobile@1x.png'),
+                    url('../img/bg-triangle-white.svg');
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center bottom,
+                       center top;
   background-color: $lightgrey;
 
   @media (min-resolution: 144dpi) {
