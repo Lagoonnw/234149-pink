@@ -67,7 +67,6 @@
   .main-menu__toggle-cross {
     display: inline-block;
   }
-
 }
 
 .main-menu__list {
@@ -82,9 +81,9 @@
 }
 
 .main-menu__item {
+  @include padding-tb(15px, 15px);
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000;
-  @include padding-tb(15px, 15px);
 }
 
 .main-menu__link {
@@ -138,9 +137,6 @@
 
   .main-menu__toggle {
     background-position: right bottom;
-  }
-
-  .main-menu__toggle {
   }
 
   .main-menu__link-tablet {
