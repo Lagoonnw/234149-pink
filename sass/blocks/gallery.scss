@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import 'global/variables.scss';
 
 .gallery {
   margin: auto;
@@ -27,7 +27,9 @@
 }
 
 .gallery__title {
-  margin-bottom: 45px;
+  margin-bottom: 50px;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .gallery__post-title {
@@ -38,7 +40,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-bottom: 45px;
@@ -70,13 +72,12 @@
 
 .img-post__post {
   background-color: $lightgrey;
-  padding: 5px 20px 15px 18px;
+  padding: 5px 20px 15px 20px;
   max-width: 280px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-self: stretch;
-  align-items: flex-start;
+  justify-content: space-between;
 
   &--panorama {
     margin: auto;
@@ -84,7 +85,7 @@
 }
 
 .img-post__user-name {
-  @include font(14px, 700, 24px);
+  @include font(14px, 700, 18px);
   margin-bottom: 0;
 }
 
@@ -116,6 +117,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: baseline;
+  margin-bottom: 0;
+  margin-top: auto;
 }
 
 .img-post__comment {
@@ -133,6 +136,7 @@
 
     &--panorama {
       width: 100%;
+      margin-bottom: 15px;
     }
   }
 
@@ -146,10 +150,12 @@
       position: relative;
       width: 100%;
       height: 509px;
+      overflow: hidden;
     }
   }
 
   .img-post__post {
+    min-height: 155px;
     background-color: $lightgrey;
     padding: 25px 20px 20px 25px;
     max-width: 300px;
@@ -157,7 +163,7 @@
     display: flex;
     flex-direction: column;
     align-self: stretch;
-    align-items: flex-start;
+    justify-content: space-between;
 
     &--panorama {
       margin: auto;
@@ -168,6 +174,7 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+      min-height: 120px;
     }
 
     .img-post__user-name {
@@ -180,15 +187,39 @@
     }
 
     .img-post__likes {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .img-post__like-count {
+        order: 0;
+      }
+
+      .img-post__heart-icon {
+        margin-right: 13px;
+        order: 1;
+      }
 
       &--panorama {
+        width: auto;
         margin-top: 0;
         margin-bottom: 0;
         order: 1;
+
+        .img-post__like-count {
+          margin-right: 20px;
+        }
+
+        .img-post__heart-icon {
+          margin-right: 5px;
+        }
       }
     }
 
     .img-post__comment {
+      margin-top: 0;
+      margin-bottom: auto;
 
       &--panorama {
         margin-bottom: 0;
@@ -211,13 +242,21 @@
 
   .gallery__title {
     padding-top: 90px;
-    padding-bottom: 32px;
+    padding-bottom: 80px;
     margin-bottom: 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  .gallery__post-title {
+    margin-top: 20px;
   }
 
   .img-post__photo-of-the-day {
-    top: 58px;
-    right: 40px;
+    top: 55px;
+    right: 75px;
   }
 }
 
@@ -226,10 +265,11 @@
   .gallery__inner {
     @include wrapper();
     padding: 0 10px;
+    margin-bottom: 0;
   }
 
   .img-post {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 
     &--panorama {
       margin-bottom: 40px;
@@ -237,7 +277,6 @@
   }
 
   .img-post__photo {
-
     height: 400px;
 
     &--panorama {
@@ -258,12 +297,14 @@
   }
 
   .img-post__post {
+    min-height: 155px;
 
     &--panorama {
       margin: auto;
       margin-bottom: 10px;
       max-width: 940px;
       width: 940px;
+      min-height: 96px;
       padding: 23px 27px;
       box-sizing: border-box;
       flex-direction: row;
@@ -282,6 +323,7 @@
     }
 
     .img-post__likes {
+      margin-bottom: 0;
 
       &--panorama {
         margin-top: 0;
@@ -291,20 +333,29 @@
     }
 
     .img-post__comment {
+      max-width: 250px;
 
       &--panorama {
+        max-width: 100%;
         margin-bottom: 0;
         order: 2;
       }
     }
 
-
   .gallery__title {
-    padding: 90px 300px;
+    @include wrapper();
+    box-sizing: border-box;
+    padding: 90px 190px 90px 185px;
+
+    br {
+      display: inline;
+    }
   }
 
   .gallery__post-title {
-    padding: 30px 0 65px;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 65px;
   }
 }
 

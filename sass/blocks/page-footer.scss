@@ -1,9 +1,9 @@
-@import 'variables.scss';
+@import 'global/variables.scss';
 
 .page-footer {
   @include font(14px, 400, 24px);
   color: $darkblue;
-  padding-top: 30px;
+  padding-top: 35px;
 }
 
 .page-footer-contacts__inner {
@@ -12,15 +12,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.page-footer-contacts__title {
-  @include font(24px, 300, 24px*1.2);
-  @include padding-rl(20px, 20px);
-  color: $darkblue;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 35px;
 }
 
 .page-footer-contacts__contact-item {
@@ -46,13 +37,26 @@
   background-image: url('../img/bg-map-mobile@1x.png');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 320 auto;
+  position: relative;
 
-  @media (min-resolution: 144dpi) {
+  @media (min-resolution: 144dpi),
+         (min-resolution: 1.5dppx) {
     background-image: url('../img/bg-map-mobile@2x.png');
   }
 
-  @media (min-resolution: 1.5dppx) {
-    background-image: url('../img/bg-map-mobile@2x.png');
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background-image: url('../img/bg-triangle-white-footer.svg');
+    background-position: 0 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -104,12 +108,13 @@
   flex-direction: column;
   margin: auto;
   justify-content: space-between;
-  min-height: 245px;
+  min-height: 235px;
 }
 
 .page-footer-socials__applogo {
   font-size: 0;
   margin: auto;
+  margin-top: 10px;
 }
 
 .footer-socials {
@@ -117,6 +122,7 @@
   margin: auto;
   flex-direction: row;
   min-width: 178px;
+  width: 178px;
   justify-content: space-between;
 }
 
@@ -164,19 +170,27 @@
 }
 
 .page-footer-socials__copyrights {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    p {
-      margin-right: 15px;
-    }
+  p {
+    margin-right: 15px;
   }
+}
+
+.page-footer-contacts__title {
+  @include font(24px, 300, 24px*1.2);
+  @include padding-rl(20px, 20px);
+  color: $darkblue;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
 
 @media (min-height: 660px) {
 
   .page-footer {
-
     padding-top: 0;
 
     &--index .page-footer-socials {
@@ -186,76 +200,76 @@
 
   .page-footer-contacts__inner {
     min-width: 100%;
-    padding: 0 30px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: flex-start;
     position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: 10;
-      bottom: -71px;
-      left: -5px;
-      width: 100%;
-      height: 72px;
-      background-image: url('../img/bg-triangle-white-footer.svg');
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
   }
 
   .page-footer-socials__inner {
-    width: 100%;
-    padding: 0 40px;
+    @include wrapper();
+    padding: 0 20px;
+    margin: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    margin: auto;
     justify-content: space-between;
     min-height: 127px;
   }
 
   .page-footer__yandex-map {
     width: 100%;
-    height: 378px;
-  }
-
-  .page-footer-contacts__title {
-    @include font(40px, 300, 40px*1.2);
-    color: $darkblue;
-    text-align: center;
-    width: 100%;
+    height: 373px;
   }
 
   .page-footer-socials__copyrights {
     margin: auto 0;
+    margin-right: 35px;
   }
 
   .footer-socials {
     margin: auto 0;
+    margin-top: 38px;
+    margin-right: 10px;
   }
 
   .page-footer-socials__applogo {
     margin: auto 0;
+    width: 146.3px;
+    margin-top: 37.5px;
+    margin-left: 35px;
+    margin-left: 0;
   }
 
   .page-footer-contacts__contact-item {
     margin-top: 10px;
+
+    &:nth-of-type(1) {
+      margin-right: -20px;
+    }
+
+    &:nth-of-type(3) {
+      margin-top: 15px;
+    }
 
     b {
       margin-bottom: 7px;
     }
   }
 
+  .page-footer-socials__inner {
+
+  }
+
   .page-footer-socials__copyrights {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 129.783px;
+    margin-top: 37.5px;
+    margin-right: 0;
 
     p {
       margin-right: 15px;
@@ -267,14 +281,33 @@
     background-image: url('../img/bg-map-tablet@1x.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 700 auto;
 
-    @media (min-resolution: 144dpi) {
-      background-image: url('../img/bg-map-tablet@2x.jpg');
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+      background-image: url('../img/bg-triangle-white-footer.svg');
+      background-position: center -30px;
+      background-size: 120%;
+      background-repeat: no-repeat;
     }
 
-    @media (min-resolution: 1.5dppx) {
+    @media (min-resolution: 144dpi),
+           (min-resolution: 1.5dppx) {
       background-image: url('../img/bg-map-tablet@2x.jpg');
     }
+  }
+
+  .page-footer-contacts__title {
+    @include font(40px, 300, 40px*1.2);
+    color: $darkblue;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -288,11 +321,13 @@
   }
 
   .page-footer-contacts__inner {
+    @include wrapper();
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+    height: 280px;
 
     &::after {
       display: none;
@@ -307,25 +342,29 @@
     color: $darkblue;
     text-align: center;
     margin: auto;
-    margin-bottom: 30px;
-    order: 0;
+    margin-bottom: 55px;
   }
 
   .page-footer-contacts__contact-item {
 
-    &:nth-child(1) {
+    &:nth-of-type(1) {
+      order: 0;
+      margin-top: 0;
+    }
+
+    &:nth-of-type(2) {
+      order: 2;
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-top: 0;
       order: 1;
     }
 
-    &:nth-child(2) {
-      order: 2;
-    }
-
-    &:nth-child(3) {
-      display: flex;
-      flex-direction: column;
-      order: 3;
-    }
+    b {
+        margin-bottom: 25px;
+      }
   }
 
   .page-footer-socials__inner {
@@ -337,29 +376,13 @@
     flex-wrap: wrap;
     margin: auto;
     justify-content: space-between;
+    min-height: 197px;
     height: 197px;
-  }
-
-  .page-footer__map {
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 200px;
-      background-image: url('../img/bg-triangle-white-footer.svg');
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
   }
 
   .page-footer__yandex-map {
     width: 100%;
-    height: 550px;
+    height: 523px;
   }
 
   .page-footer-contacts__title {
@@ -370,7 +393,7 @@
   }
 
   .page-footer-socials__applogo {
-    margin-top: auto;
+    margin-top: 72.5px;
     margin-bottom: auto;
     margin-left: 0;
     margin-right: auto;
@@ -391,6 +414,8 @@
   }
 
   .page-footer-socials__copyrights {
+    margin-top: 71.5px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -412,13 +437,35 @@
     background-image: url('../img/bg-map-desktop@1x.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 1200px auto;
+    position: relative;
 
-    @media (min-resolution: 144dpi) {
-      background-image: url('../img/bg-map-desktop@2x.jpg');
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      top: -2px;
+      left: 50%;
+      margin-left: -600px;
+      width: 1200px;
+      height: 130px;
+      background-image: url('../img/bg-triangle-white-footer.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center 0;
     }
 
-    @media (min-resolution: 1.5dppx) {
+    &::after {
+      display: none;
+    }
+
+    @media (min-resolution: 144dpi),
+           (min-resolution: 1.5dppx) {
       background-image: url('../img/bg-map-desktop@2x.jpg');
     }
+  }
+
+  .footer-socials {
+    margin-top: 73px;
   }
 }
